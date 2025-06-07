@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,52 +13,52 @@
             padding: 0;
             font-family: Arial, sans-serif;
         }
-        
+
         .footer {
             background-color: #0a1a2e;
             color: #fff;
             padding: 20px 0;
-            width:auto;
+            width: auto;
             margin-left: -50px;
             margin-top: 20px;
         }
-        
+
         .container {
             max-width: 90%;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
-           
+
         }
-        
+
         .footer-column {
             width: 25%;
             padding: 0 15px;
             box-sizing: border-box;
-            
+
         }
-        
+
         .footer-logo {
-            height:60px;
+            height: 60px;
             margin-bottom: 20px;
         }
-        
+
         .footer-desc {
             color: #a9b3c1;
             font-size: 14px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        
+
         .social-icons {
             display: flex;
             gap: 10px;
         }
-        
+
         .social-icon {
             width: 36px;
             height: 36px;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -66,11 +67,11 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
-        
+
         .social-icon:hover {
             background-color: #d63031;
         }
-        
+
         .footer-title {
             font-size: 18px;
             font-weight: bold;
@@ -78,7 +79,7 @@
             position: relative;
             padding-bottom: 10px;
         }
-        
+
         .footer-title:after {
             content: "";
             position: absolute;
@@ -88,17 +89,17 @@
             height: 2px;
             background-color: #d63031;
         }
-        
+
         .useful-links {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .useful-links li {
             margin-bottom: 15px;
         }
-        
+
         .useful-links a {
             color: #a9b3c1;
             text-decoration: none;
@@ -107,23 +108,23 @@
             font-size: 14px;
             transition: color 0.3s;
         }
-        
+
         .useful-links a:hover {
             color: #fff;
         }
-        
+
         .useful-links a i {
             color: #d63031;
             margin-right: 10px;
             font-size: 12px;
         }
-        
+
         .contact-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .contact-list li {
             margin-bottom: 15px;
             display: flex;
@@ -131,22 +132,22 @@
             color: #a9b3c1;
             font-size: 14px;
         }
-        
+
         .contact-list i {
             color: #d63031;
             margin-right: 10px;
             margin-top: 3px;
             width: 16px;
         }
-        
+
         .newsletter-form {
             margin-top: 20px;
         }
-        
+
         .newsletter-input {
             width: 100%;
             padding: 12px 15px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border: none;
             border-radius: 4px;
             color: #fff;
@@ -154,11 +155,11 @@
             margin-bottom: 10px;
             box-sizing: border-box;
         }
-        
+
         .newsletter-input::placeholder {
             color: #6c7a8c;
         }
-        
+
         .subscribe-btn {
             width: 100%;
             padding: 12px 15px;
@@ -172,34 +173,70 @@
             text-transform: uppercase;
             transition: background-color 0.3s;
         }
-        
+
         .subscribe-btn:hover {
             background-color: #c02425;
         }
-        
+
         @media (max-width: 768px) {
             .footer-column {
                 width: 50%;
                 margin-bottom: 30px;
             }
         }
-        
+
         @media (max-width: 576px) {
             .footer-column {
                 width: 100%;
             }
         }
 
-        
+        .view-button a {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #da3c3c;
+            color: #fff !important;
+            text-transform: uppercase;
+            font-weight: 500;
+            border-radius: 3px;
+            text-decoration: none !important;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .view-button a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 200%;
+            left: -100%;
+            top: -100%;
+            background-color: #0a1d35;
+            transform: skewX(-40deg);
+            z-index: -1;
+            transition: all .6s;
+        }
+
+        .view-button a:hover::before {
+            width: 240%;
+            top: 50%;
+            transform: translateY(-50%) skewX(-40deg);
+            transition: all .6s;
+        }
     </style>
 </head>
+
 <body>
     <footer class="footer">
         <div class="container">
             <div class="footer-column">
                 <img src="../img/loho1.jpg" class="footer-logo">
                 <p class="footer-desc" style="text-align: justify;">
-                    Hibtel Hotel là một khách sạn hiện đại, cung cấp các dịch vụ lưu trú chất lượng cao với thiết kế sang trọng và tiện nghi. Nằm ở vị trí thuận lợi trong thành phố, Hibtel Hotel thường được khách du lịch và doanh nhân ưa chuộng vì sự thuận tiện trong việc di chuyển. Hibtel Hotel cam kết mang đến trải nghiệm thoải mái và tận tình cho mọi khách hàng.
+                    Hibtel Hotel là một khách sạn hiện đại, cung cấp các dịch vụ lưu trú chất lượng cao với thiết kế
+                    sang trọng và tiện nghi. Nằm ở vị trí thuận lợi trong thành phố, Hibtel Hotel thường được khách du
+                    lịch và doanh nhân ưa chuộng vì sự thuận tiện trong việc di chuyển. Hibtel Hotel cam kết mang đến
+                    trải nghiệm thoải mái và tận tình cho mọi khách hàng.
                 </p>
                 <div class="social-icons">
                     <a href="#" class="social-icon">
@@ -213,45 +250,45 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="footer-column">
-                <h3 class="footer-title">Usefull Links</h3>
+                <h3 class="footer-title">Liên Kết Hữu Ích</h3>
                 <ul class="useful-links">
                     <li>
                         <a href="#">
                             <i class="fas fa-chevron-right"></i>
-                            About Us
+                            Giới Thiệu Chúng Tôi
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fas fa-chevron-right"></i>
-                            Boutique Apartment
+                            Căn Hộ Boutique
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fas fa-chevron-right"></i>
-                            Jungle Safari Resort
+                            Khu Nghỉ Dưỡng Rừng Rậm
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fas fa-chevron-right"></i>
-                            Mountain Chalet
+                            Nhà Trọ Trên Núi
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fas fa-chevron-right"></i>
-                            Luxury Resort
+                            Khu Nghỉ Dưỡng Sang Trọng
                         </a>
                     </li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
-                <h3 class="footer-title">Contact Us</h3>
+                <h3 class="footer-title">Thông Tin Liên Hệ</h3>
                 <ul class="contact-list">
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
@@ -267,16 +304,20 @@
                     </li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
-                <h3 class="footer-title">Newsletter</h3>
-                <p class="footer-desc">Every Single Updates and Notification</p>
+                <h3 class="footer-title">Bản Tin</h3>
+                <p class="footer-desc">Cập nhật và thông báo mới nhất</p>
                 <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Enter email">
-                    <button type="submit" class="subscribe-btn">Subscribe Now</button>
+                    <input type="email" class="newsletter-input" placeholder="Nhập email">
+                    <div class="view-button">
+                        <a href="subscribe.html" style="background-color: #da3c3c;">Đăng Ký Ngay</a>
+                    </div>
+
                 </form>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

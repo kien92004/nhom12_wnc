@@ -128,6 +128,39 @@
         .reservation-btn:hover {
             background-color: #b52e2c;
         }
+         .view-button a {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #da3c3c;
+            color: #fff !important;
+            text-transform: uppercase;
+            font-weight: 500;
+            border-radius: 3px;
+            text-decoration: none !important;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .view-button a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 200%;
+            left: -100%;
+            top: -100%;
+            background-color: #0a1d35;
+            transform: skewX(-40deg);
+            z-index: -1;
+            transition: all .6s;
+        }
+
+        .view-button a:hover::before {
+            width: 240%;
+            top: 50%;
+            transform: translateY(-50%) skewX(-40deg);
+            transition: all .6s;
+        }
     </style>
 </head>
 <body>
@@ -152,7 +185,9 @@
                     <li><a href="Contact.html">Liên hệ </a></li>
                 </ul>
             </div>
-            <button class="reservation-btn"><a href="bookingNow.html" style="color: inherit; text-decoration: none;">ĐẶT PHÒNG</a></button>
+             <div class="view-button">
+                <a href="bookingNow.html">ĐẶT PHÒNG</a>
+            </div>
         </nav>
     </div>
 

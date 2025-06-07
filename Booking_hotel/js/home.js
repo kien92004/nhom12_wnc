@@ -76,22 +76,22 @@ $(document).ready(function() {
     // Room Cards
     const rooms = [
         {
-            name: "Luxury Suite Room",
-            price: "$150 per night",
+            name: "Phòng Suite Cao Cấp",
+            price: "700.000 VNĐ/đêm",
             stars: "★★★★★",
             description: "Phòng Suite Sang Trọng với không gian rộng rãi, nội thất cao cấp, bao gồm phòng khách và phòng ngủ riêng.",
             img: "../img/resort-4.jpg"
         },
         {
-            name: "Deluxe Suite Room",
-            price: "$120 per night",
+            name: "Phòng Suite Hạng Sang",
+            price: "1.000.000 VNĐ/đêm",
             stars: "★★★★☆",
             description: "Phòng Suite Cao Cấp, tiện nghi tốt hơn, không gian thoải mái, thường có dịch vụ bổ sung.",
             img: "../img/resort-8.jpg"
         },
         {
-            name: "Standard Double Room",
-            price: "$90 per night",
+            name: "Phòng Đôi Tiêu Chuẩn",
+            price: "800.00 VNĐ/đêm",
             stars: "★★★☆☆",
             description: "Phòng Đôi Tiêu Chuẩn, có hai giường hoặc một giường lớn, trang bị tiện nghi cơ bản, phù hợp cho cặp đôi.",
             img: "../img/resort-14.jpg"
@@ -114,8 +114,8 @@ $(document).ready(function() {
                         <h4 class="mb-3 fw-bold">${room.name}</h4>
                         <p class="mb-3">${room.description}</p>
                         <div class="d-flex gap-3">
-                            <button class="btn btn-danger px-3 py-2"><a href="phong1.html" style="color:white;text-decoration:none">DETAILS</a></button>
-                            <a href="bookingNow.html" class="btn btn-primary px-3 py-2">BOOKING NOW</a>
+                            <button class="btn btn-danger px-3 py-2"><a href="phong1.html" style="color:white;text-decoration:none">CHI TIẾT</a></button>
+                            <a href="bookingNow.html" class="btn btn-primary px-3 py-2">ĐẶT PHÒNG</a>
                         </div>
                     </div>
                 </div>
@@ -436,7 +436,7 @@ function createBlogHTML(blog, index) {
                         <small><i class="far fa-clock me-1"></i> ${blog.date}</small>
                         <small><i class="fas fa-user me-1"></i> by ${blog.author}</small>
                     </div>
-                    <a href="phong1.html" class="text-danger text-decoration-underline">READ MORE</a>
+                    <a href="phong1.html" class="text-danger text-decoration-underline">XEM THÊM </a>
                 </div>
             </div>
         </div>

@@ -51,6 +51,11 @@
         padding-top: 70px;
       }
     }
+    .badge-status {
+      font-weight: 700;
+      padding: 0.5em 1em;
+      opacity: 1 !important;
+    }
   </style>
 </head>
 <body>
@@ -60,44 +65,42 @@
     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" aria-label="Chuyển đổi thanh bên">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand ms-2" href="#">Quản trị HIbel</a>
+    <a class="navbar-brand ms-2" href="#">Quản trị HItbel</a>
   </div>
 </nav>
 
 <!-- Sidebar -->
- <div id="sidebar" class="d-none d-md-block">
-    <div class="p-3 text-white fs-5 fw-bold">Hibel Admin</div>
-    <nav class="nav flex-column px-2">
-      <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
-      <a class="nav-link" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
-      <a class="nav-link" href="order.html"><i class="bi bi-cart-fill me-2"></i>Phòng đặt</a>
-      <a class="nav-link active" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
-      <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
-      <a class="nav-link" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ </a>
-      <a class="nav-link" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
-      
+<div id="sidebar" class="d-none d-md-block">
+  <div class="p-3 text-white fs-5 fw-bold">Hibtel Admin</div>
+  <nav class="nav flex-column px-2">
+    <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
+    <a class="nav-link" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
+    <a class="nav-link" href="order.html"><i class="bi bi-cart-fill me-2"></i>Phòng đặt</a>
+    <a class="nav-link active" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
+    <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
+    <a class="nav-link" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ </a>
+    <a class="nav-link" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
+  </nav>
+</div>
+
+<!-- Offcanvas Sidebar for small screens -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+  <div class="offcanvas-header bg-dark text-white">
+    <h5 class="offcanvas-title" id="offcanvasSidebarLabel">HIbtel Admin</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <nav class="nav flex-column">
+      <a class="nav-link px-3 py-2" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
+      <a class="nav-link px-3 py-2" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
+      <a class="nav-link px-3 py-2" href="order.html"><i class="bi bi-cart-fill me-2"></i> Phòng đặt</a>
+      <a class="nav-link active px-3 py-2" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
+      <a class="nav-link px-3 py-2" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
+      <a class="nav-link px-3 py-2" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ</a>
+      <a class="nav-link px-3 py-2" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
     </nav>
   </div>
-
-  <!-- Offcanvas Sidebar for small screens -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
-    <div class="offcanvas-header bg-dark text-white">
-      <h5 class="offcanvas-title" id="offcanvasSidebarLabel">HIbel Admin</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-0">
-      <nav class="nav flex-column">
-        <a class="nav-link px-3 py-2" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
-        <a class="nav-link px-3 py-2" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
-        <a class="nav-link px-3 py-2" href="order.html"><i class="bi bi-cart-fill me-2"></i> Phòng đặt</a>
-        <a class="nav-link active px-3 py-2" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
-        <a class="nav-link px-3 py-2" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
-        <a class="nav-link px-3 py-2" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ</a>
-        <a class="nav-link px-3 py-2" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
-        
-      </nav>
-    </div>
-  </div>
+</div>
 
 <!-- Main content -->
 <main>
@@ -223,213 +226,209 @@
     </form>
   </div>
 </div>
-  </div>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const roomTypes = [
-  "Phòng Tiêu Chuẩn",
-  "Suite Sang Trọng",
-  "Phòng Gia Đình",
-  "Phòng Sang Trọng",
-];
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const roomTypes = [
+    "Phòng Tiêu Chuẩn",
+    "Suite Sang Trọng",
+    "Phòng Gia Đình",
+    "Phòng Sang Trọng",
+  ];
 
-const statuses = ["Có Sẵn", "Đang Thuê", "Bảo Trì"];
-const roomsBody = document.getElementById("roomsBody");
+  const statuses = ["Có Sẵn", "Đang Thuê", "Bảo Trì"];
+  const roomsBody = document.getElementById("roomsBody");
 
-// Hàm tạo số phòng ngẫu nhiên
-function generateRandomRooms(count) {
-  const rooms = [];
-  for (let i = 0; i < count; i++) {
-    const roomNumber = 200 + i; // Số phòng bắt đầu từ 201
-    const roomType = roomTypes[Math.floor(Math.random() * roomTypes.length)];
-    const price = Math.floor(Math.random() * 300) + 100; // Giá từ 100 đến 400
-    const status = statuses[Math.floor(Math.random() * statuses.length)];
-    const capacity = Math.floor(Math.random() * 3) + 2; // Sức chứa từ 2 đến 4
+  // Hàm tạo số phòng ngẫu nhiên
+  function generateRandomRooms(count) {
+    const rooms = [];
+    for (let i = 0; i < count; i++) {
+      const roomNumber = 200 + i; // Số phòng bắt đầu từ 201
+      const roomType = roomTypes[Math.floor(Math.random() * roomTypes.length)];
+      const price = Math.floor(Math.random() * 300) + 100; // Giá từ 100 đến 400
+      const status = statuses[Math.floor(Math.random() * statuses.length)];
+      const capacity = Math.floor(Math.random() * 3) + 2; // Sức chứa từ 2 đến 4
 
-    rooms.push({
-      number: roomNumber,
-      type: roomType,
-      price: price,
-      status: status,
-      capacity: capacity,
+      rooms.push({
+        number: roomNumber,
+        type: roomType,
+        price: price,
+        status: status,
+        capacity: capacity,
+      });
+    }
+    return rooms;
+  }
+
+  // Hàm tạo badge HTML theo trạng thái
+  function createStatusBadge(status) {
+    let badgeClass = 'bg-secondary';
+    if (status === 'Có Sẵn') badgeClass = 'bg-success';
+    else if (status === 'Đang Thuê') badgeClass = 'bg-danger';
+    else if (status === 'Bảo Trì') badgeClass = 'bg-warning text-dark';
+
+    return `<span class="badge badge-status ${badgeClass}">${status}</span>`;
+  }
+
+  // Hàm thêm phòng vào bảng
+  function addRoomsToTable(rooms) {
+    rooms.forEach((room) => {
+      const row = document.createElement("tr");
+      row.setAttribute("data-room", JSON.stringify(room));
+      row.innerHTML = `
+        <td>${room.number}</td>
+        <td>${room.type}</td>
+        <td>${room.price}</td>
+        <td>${createStatusBadge(room.status)}</td>
+        <td>${room.capacity}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-primary edit-room-btn" type="button" title="Chỉnh sửa Phòng">
+            <i class="bi bi-pencil-square"></i> Chỉnh sửa
+          </button>
+          <button class="btn btn-sm btn-outline-danger delete-room-btn" type="button" title="Xóa Phòng">
+            <i class="bi bi-trash"></i> Xóa
+          </button>
+        </td>
+      `;
+      roomsBody.appendChild(row);
     });
   }
-  return rooms;
-}
 
-// Hàm thêm phòng vào bảng
-function addRoomsToTable(rooms) {
-  rooms.forEach((room) => {
-    const row = document.createElement("tr");
-    row.setAttribute("data-room", JSON.stringify(room));
-    row.innerHTML = `
-      <td>${room.number}</td>
-      <td>${room.type}</td>
-      <td>${room.price}</td>
-      <td><span class="badge ${room.status === 'Có Sẵn' ? 'bg-success' : room.status === 'Đang Thuê' ? 'bg-danger' : 'bg-warning text-dark'}">${room.status}</span></td>
-      <td>${room.capacity}</td>
-      <td>
-        <button class="btn btn-sm btn-outline-primary edit-room-btn" type="button" title="Chỉnh sửa Phòng">
-          <i class="bi bi-pencil-square"></i> Chỉnh sửa
-        </button>
-        <button class="btn btn-sm btn-outline-danger delete-room-btn" type="button" title="Xóa Phòng">
-          <i class="bi bi-trash"></i> Xóa
-        </button>
-      </td>
-    `;
-    roomsBody.appendChild(row);
-  });
-}
+  // Tạo và thêm phòng
+  const randomRoomCount = Math.floor(Math.random() * 6) + 10; // Từ 10 đến 15 phòng
+  const rooms = generateRandomRooms(randomRoomCount);
+  addRoomsToTable(rooms);
 
-// Tạo và thêm phòng
-const randomRoomCount = Math.floor(Math.random() * 6) + 10; // Từ 10 đến 15 phòng
-const rooms = generateRandomRooms(randomRoomCount);
-addRoomsToTable(rooms);
+  const roomsTableBody = document.querySelector('#roomsTable tbody');
+  const addRoomModal = new bootstrap.Modal(document.getElementById('addRoomModal'));
+  const editRoomModal = new bootstrap.Modal(document.getElementById('editRoomModal'));
 
-    const roomsTableBody = document.querySelector('#roomsTable tbody');
-    const addRoomModal = new bootstrap.Modal(document.getElementById('addRoomModal'));
-    const editRoomModal = new bootstrap.Modal(document.getElementById('editRoomModal'));
+  // Add Room Form Elements
+  const addRoomForm = document.getElementById('addRoomForm');
+  const addRoomNumber = document.getElementById('addRoomNumber');
+  const addRoomType = document.getElementById('addRoomType');
+  const addRoomPrice = document.getElementById('addRoomPrice');
+  const addRoomStatus = document.getElementById('addRoomStatus');
+  const addRoomCapacity = document.getElementById('addRoomCapacity');
 
-    // Add Room Form Elements
-    const addRoomForm = document.getElementById('addRoomForm');
-    const addRoomNumber = document.getElementById('addRoomNumber');
-    const addRoomType = document.getElementById('addRoomType');
-    const addRoomPrice = document.getElementById('addRoomPrice');
-    const addRoomStatus = document.getElementById('addRoomStatus');
-    const addRoomCapacity = document.getElementById('addRoomCapacity');
+  // Edit Room Form Elements
+  const editRoomForm = document.getElementById('editRoomForm');
+  const editRoomRowIndex = document.getElementById('editRoomRowIndex');
+  const editRoomNumber = document.getElementById('editRoomNumber');
+  const editRoomType = document.getElementById('editRoomType');
+  const editRoomPrice = document.getElementById('editRoomPrice');
+  const editRoomStatus = document.getElementById('editRoomStatus');
+  const editRoomCapacity = document.getElementById('editRoomCapacity');
 
-    // Edit Room Form Elements
-    const editRoomForm = document.getElementById('editRoomForm');
-    const editRoomRowIndex = document.getElementById('editRoomRowIndex');
-    const editRoomNumber = document.getElementById('editRoomNumber');
-    const editRoomType = document.getElementById('editRoomType');
-    const editRoomPrice = document.getElementById('editRoomPrice');
-    const editRoomStatus = document.getElementById('editRoomStatus');
-    const editRoomCapacity = document.getElementById('editRoomCapacity');
+  // Add Room
+  addRoomForm.addEventListener('submit', e => {
+    e.preventDefault();
+    e.stopPropagation();
 
-    // Helper: Create badge HTML by status
-    function createStatusBadge(status) {
-      let badgeClass = 'bg-secondary';
-      if (status === 'Available') badgeClass = 'bg-success';
-      else if (status === 'Occupied') badgeClass = 'bg-danger';
-      else if (status === 'Maintenance') badgeClass = 'bg-warning text-dark';
-
-      return `<span class="badge ${badgeClass}">${status}</span>`;
+    if (!addRoomForm.checkValidity()) {
+      addRoomForm.classList.add('was-validated');
+      return;
     }
 
-    // Add Room
-    addRoomForm.addEventListener('submit', e => {
-      e.preventDefault();
-      e.stopPropagation();
+    const newRoom = {
+      number: addRoomNumber.value.trim(),
+      type: addRoomType.value.trim(),
+      price: Number(addRoomPrice.value),
+      status: addRoomStatus.value,
+      capacity: Number(addRoomCapacity.value)
+    };
 
-      if (!addRoomForm.checkValidity()) {
-        addRoomForm.classList.add('was-validated');
-        return;
-      }
-
-      const newRoom = {
-        number: addRoomNumber.value.trim(),
-        type: addRoomType.value.trim(),
-        price: Number(addRoomPrice.value),
-        status: addRoomStatus.value,
-        capacity: Number(addRoomCapacity.value)
-      };
-
-      const tr = document.createElement('tr');
-      tr.dataset.room = JSON.stringify(newRoom);
-      tr.innerHTML = `
-        <td>${newRoom.number}</td>
-        <td>${newRoom.type}</td>
-        <td>${newRoom.price}</td>
-        <td>${createStatusBadge(newRoom.status)}</td>
-        <td>${newRoom.capacity}</td>
-        <td>
-          <button class="btn btn-sm btn-outline-primary edit-room-btn" type="button" title="Edit Room">
-            <i class="bi bi-pencil-square"></i> Chỉnh sửa
-          </button>
-          <button class="btn btn-sm btn-outline-danger delete-room-btn" type="button" title="Delete Room">
-            <i class="bi bi-trash"></i> Xóa
-          </button>
+    const tr = document.createElement('tr');
+    tr.dataset.room = JSON.stringify(newRoom);
+    tr.innerHTML = `
+      <td>${newRoom.number}</td>
+      <td>${newRoom.type}</td>
+      <td>${newRoom.price}</td>
+      <td>${createStatusBadge(newRoom.status)}</td>
+      <td>${newRoom.capacity}</td>
+      <td>
+        <button class="btn btn-sm btn-outline-primary edit-room-btn" type="button" title="Edit Room">
+          <i class="bi bi-pencil-square"></i> Chỉnh sửa
+        </button>
+        <button class="btn btn-sm btn-outline-danger delete-room-btn" type="button" title="Delete Room">
+          <i class="bi bi-trash"></i> Xóa
         </td>
-      `;
-      roomsTableBody.appendChild(tr);
+      </tr>
+    `;
+    roomsTableBody.appendChild(tr);
 
-      addRoomForm.reset();
-      addRoomForm.classList.remove('was-validated');
-      addRoomModal.hide();
-    });
+    addRoomForm.reset();
+    addRoomForm.classList.remove('was-validated');
+    addRoomModal.hide();
+  });
 
-    // Edit Room - Delegated event listener
-    roomsTableBody.addEventListener('click', e => {
-      if (e.target.closest('.edit-room-btn')) {
-        const btn = e.target.closest('.edit-room-btn');
-        const tr = btn.closest('tr');
+  // Edit Room - Delegated event listener
+  roomsTableBody.addEventListener('click', e => {
+    if (e.target.closest('.edit-room-btn')) {
+      const btn = e.target.closest('.edit-room-btn');
+      const tr = btn.closest('tr');
 
-        const roomData = JSON.parse(tr.dataset.room);
+      const roomData = JSON.parse(tr.dataset.room);
 
-        editRoomRowIndex.value = Array.from(roomsTableBody.children).indexOf(tr);
-        editRoomNumber.value = roomData.number;
-        editRoomType.value = roomData.type;
-        editRoomPrice.value = roomData.price;
-        editRoomStatus.value = roomData.status;
-        editRoomCapacity.value = roomData.capacity;
+      editRoomRowIndex.value = Array.from(roomsTableBody.children).indexOf(tr);
+      editRoomNumber.value = roomData.number;
+      editRoomType.value = roomData.type;
+      editRoomPrice.value = roomData.price;
+      editRoomStatus.value = roomData.status;
+      editRoomCapacity.value = roomData.capacity;
 
-        editRoomForm.classList.remove('was-validated');
-        editRoomModal.show();
-      } 
-      else if(e.target.closest('.delete-room-btn')) {
-        const btn = e.target.closest('.delete-room-btn');
-        const tr = btn.closest('tr');
-        if(confirm('Are you sure you want to delete this room?')) {
-          tr.remove();
-        }
-      }
-    });
-
-    // Save Edit Room
-    editRoomForm.addEventListener('submit', e => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      if (!editRoomForm.checkValidity()) {
-        editRoomForm.classList.add('was-validated');
-        return;
-      }
-
-      const rowIndex = Number(editRoomRowIndex.value);
-      const tr = roomsTableBody.children[rowIndex];
-
-      const updatedRoom = {
-        number: editRoomNumber.value.trim(),
-        type: editRoomType.value.trim(),
-        price: Number(editRoomPrice.value),
-        status: editRoomStatus.value,
-        capacity: Number(editRoomCapacity.value)
-      };
-
-      tr.dataset.room = JSON.stringify(updatedRoom);
-      tr.innerHTML = `
-        <td>${updatedRoom.number}</td>
-        <td>${updatedRoom.type}</td>
-        <td>${updatedRoom.price}</td>
-        <td>${createStatusBadge(updatedRoom.status)}</td>
-        <td>${updatedRoom.capacity}</td>
-        <td>
-          <button class="btn btn-sm btn-outline-primary edit-room-btn" type="button" title="Edit Room">
-            <i class="bi bi-pencil-square"></i> Chỉnh sửa
-          </button>
-          <button class="btn btn-sm btn-outline-danger delete-room-btn" type="button" title="Delete Room">
-            <i class="bi bi-trash"></i> Xóa
-          </button>
-        </td>
-      `;
       editRoomForm.classList.remove('was-validated');
-      editRoomModal.hide();
-    });
-  </script>
+      editRoomModal.show();
+    } else if (e.target.closest('.delete-room-btn')) {
+      const btn = e.target.closest('.delete-room-btn');
+      const tr = btn.closest('tr');
+      if (confirm('Are you sure you want to delete this room?')) {
+        tr.remove();
+      }
+    }
+  });
+
+  // Save Edit Room
+  editRoomForm.addEventListener('submit', e => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!editRoomForm.checkValidity()) {
+      editRoomForm.classList.add('was-validated');
+      return;
+    }
+
+    const rowIndex = Number(editRoomRowIndex.value);
+    const tr = roomsTableBody.children[rowIndex];
+
+    const updatedRoom = {
+      number: editRoomNumber.value.trim(),
+      type: editRoomType.value.trim(),
+      price: Number(editRoomPrice.value),
+      status: editRoomStatus.value,
+      capacity: Number(editRoomCapacity.value)
+    };
+
+    tr.dataset.room = JSON.stringify(updatedRoom);
+    tr.innerHTML = `
+      <td>${updatedRoom.number}</td>
+      <td>${updatedRoom.type}</td>
+      <td>${updatedRoom.price}</td>
+      <td>${createStatusBadge(updatedRoom.status)}</td>
+      <td>${updatedRoom.capacity}</td>
+      <td>
+        <button class="btn btn-sm btn-outline-primary edit-room-btn" type="button" title="Edit Room">
+          <i class="bi bi-pencil-square"></i> Chỉnh sửa
+        </button>
+        <button class="btn btn-sm btn-outline-danger delete-room-btn" type="button" title="Delete Room">
+          <i class="bi bi-trash"></i> Xóa
+        </td>
+      </tr>
+    `;
+    editRoomForm.classList.remove('was-validated');
+    editRoomModal.hide();
+  });
+</script>
 </body>
 </html>
-
- 

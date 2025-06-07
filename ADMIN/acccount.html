@@ -60,13 +60,13 @@
     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" aria-label="Chuyển đổi thanh bên">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand ms-2" href="#">Quản trị viên HIbel</a>
+    <a class="navbar-brand ms-2" href="#">Quản trị viên HIbtel</a>
   </div>
 </nav>
 
 <!-- Sidebar -->
  <div id="sidebar" class="d-none d-md-block">
-    <div class="p-3 text-white fs-5 fw-bold">Hibel Admin</div>
+    <div class="p-3 text-white fs-5 fw-bold">Hibtel Admin</div>
     <nav class="nav flex-column px-2">
       <a class="nav-link " href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
       <a class="nav-link" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
@@ -104,7 +104,7 @@
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h1>Quản lý Tài khoản</h1>
     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAccountModal">
-      <i class="bi bi-plus-lg me-1"></i> Thêm Tài khoản Mới
+      <i class="bi bi-plus-lg me-1"></i> Thêm Tài khoản mới
     </button>
   </div>
 
@@ -121,26 +121,26 @@
         </tr>
       </thead>
       <tbody>
-        <tr data-account='{"id":"U001","name":"Quản trị viên HIbel","email":"admin@hibelhotel.com","role":"Quản trị viên","status":"Hoạt động"}'>
+        <tr data-account='{"id":"U001","name":"Đặng Đình Kiên","email":"kien@example.com","role":"Quản trị viên","status":" Hoạt động"}'>
           <td>U001</td>
-          <td>Quản trị viên HIbel</td>
-          <td>admin@hibelhotel.com</td>
-          <td>Quản trị viên</td>
+          <td>Đặng Đình KiênKiên</td>
+          <td>kien@example.com</td>
+          <td>Quản trị viên </td>
           <td><span class="badge bg-success">Hoạt động</span></td>
           <td>
             <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Chỉnh sửa Tài khoản">
               <i class="bi bi-pencil-square"></i> Chỉnh sửa
             </button>
-            <button class="btn btn-sm btn-outline-danger delete-account-btn" type="button" title="Vô hiệu hóa Tài khoản">
+            <button class="btn btn-sm btn-outline-danger activate-account-btn" type="button" title="Kích hoạt Tài khoản">
               <i class="bi bi-x-circle"></i> Vô hiệu hóa
             </button>
           </td>
         </tr>
-        <tr data-account='{"id":"U002","name":"Khách hàng Jane","email":"jane@example.com","role":"Khách hàng","status":"Không hoạt động"}'>
+        <tr data-account='{"id":"U002","name":"Lê Quốc Huy","email":"huylee@example.com","role":"Quản trị viên","status":"Không hoạt động"}'>
           <td>U002</td>
-          <td>Khách hàng Jane</td>
-          <td>jane@example.com</td>
-          <td>Khách hàng</td>
+          <td>Lê Quốc Huy</td>
+          <td>huylê@example.com</td>
+          <td>Quản trị viên </td>
           <td><span class="badge bg-secondary">Không hoạt động</span></td>
           <td>
             <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Chỉnh sửa Tài khoản">
@@ -151,10 +151,10 @@
             </button>
           </td>
         </tr>
-        <tr data-account='{"id":"U003","name":"Nhân viên","email":"staff@hibelhotel.com","role":"Nhân viên","status":"Hoạt động"}'>
+        <tr data-account='{"id":"U003","name":"Lê Thị Hòa","email":"hoalt@hibelhotel.com","role":"Nhân viên","status":"Hoạt động"}'>
           <td>U003</td>
-          <td>Nhân viên</td>
-          <td>staff@hibelhotel.com</td>
+          <td>Lê Thị Hòa</td>
+          <td>hoalt@hibelhotel.com</td>
           <td>Nhân viên</td>
           <td><span class="badge bg-success">Hoạt động</span></td>
           <td>
@@ -163,6 +163,36 @@
             </button>
             <button class="btn btn-sm btn-outline-danger delete-account-btn" type="button" title="Vô hiệu hóa Tài khoản">
               <i class="bi bi-x-circle"></i> Vô hiệu hóa
+            </button>
+          </td>
+        </tr>
+        <tr data-account='{"id":"U004","name":"Vũ Cao Khoa","email":"khoa@hibelhotel.com","role":"Nhân viên","status":"Không hoạt động"}'>
+          <td>U004</td>
+          <td>Vũ Cao Khoa</td>
+          <td>khoa@hibelhotel.com</td>
+          <td>Nhân viên</td>
+          <td><span class="badge bg-secondary">Không hoạt động</span></td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Chỉnh sửa Tài khoản">
+              <i class="bi bi-pencil-square"></i> Chỉnh sửa
+            </button>
+            <button class="btn btn-sm btn-outline-success delete-account-btn" type="button" title="Vô hiệu hóa Tài khoản">
+              <i class="bi bi-x-circle"></i> Kích hoạt
+            </button>
+          </td>
+        </tr>
+        <tr data-account='{"id":"U005","name":"Nguyễn Văn Quân ","email":"quan@hibelhotel.com","role":"Trưởng phòng","status":"Không hoạt động"}'>
+          <td>U005</td>
+          <td>Nguyễn Văn Quân </td>
+          <td>quan@hibelhotel.com</td>
+          <td>Trưởng phòng</td>
+          <td><span class="badge bg-secondary">Không hoạt động</span></td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Chỉnh sửa Tài khoản">
+              <i class="bi bi-pencil-square"></i> Chỉnh sửa
+            </button>
+            <button class="btn btn-sm btn-outline-success delete-account-btn" type="button" title="Vô hiệu hóa Tài khoản">
+              <i class="bi bi-x-circle"></i> Kích hoạt
             </button>
           </td>
         </tr>
@@ -199,9 +229,9 @@
           <label for="addAccountRole" class="form-label">Vai trò</label>
           <select class="form-select" id="addAccountRole" required>
             <option value="" disabled selected>Chọn vai trò</option>
-            <option value="Administrator">Quản trị viên</option>
-            <option value="Customer">Khách hàng</option>
-            <option value="Staff">Nhân viên</option>
+            <option value="Quản trị viên ">Quản trị viên</option>
+            <option value="Trưởng phòng">Trưởng phòng</option>
+            <option value="Nhân viên">Nhân viên</option>
           </select>
           <div class="invalid-feedback">Vui lòng chọn một vai trò.</div>
         </div>
@@ -253,7 +283,7 @@
           <select class="form-select" id="editAccountRole" required>
             <option value="" disabled>Chọn vai trò</option>
             <option value="Administrator">Quản trị viên</option>
-            <option value="Customer">Khách hàng</option>
+            <option value="Customer">Trưởng phòng</option>
             <option value="Staff">Nhân viên</option>
           </select>
           <div class="invalid-feedback">Vui lòng chọn một vai trò.</div>
@@ -303,8 +333,8 @@
     // Helper: Create badge HTML by status
     function createStatusBadge(status) {
       return status === 'Active'
-        ? '<span class="badge bg-success">Active</span>'
-        : '<span class="badge bg-secondary">Inactive</span>';
+        ? '<span class="badge bg-success">Hoạt động</span>'
+        : '<span class="badge bg-secondary">Không hoạt động</span>';
     }
 
     // Add Account
@@ -335,10 +365,10 @@
         <td>${createStatusBadge(newAccount.status)}</td>
         <td>
           <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Edit Account">
-            <i class="bi bi-pencil-square"></i> Edit
+            <i class="bi bi-pencil-square"></i> Chỉnh sửa
           </button>
           <button class="btn btn-sm btn-outline-${newAccount.status === 'Active' ? 'danger delete-account-btn' : 'success activate-account-btn'}" type="button" title="${newAccount.status === 'Active' ? 'Deactivate Account' : 'Activate Account'}">
-            <i class="bi bi-${newAccount.status === 'Active' ? 'x-circle' : 'check-circle'}"></i> ${newAccount.status === 'Active' ? 'Deactivate' : 'Activate'}
+            <i class="bi bi-${newAccount.status === 'Active' ? 'x-circle' : 'check-circle'}"></i> ${newAccount.status === 'Active' ? 'Vô hiệu hóa' : 'Kích hoạt'}
           </button>
         </td>
       `;
@@ -378,7 +408,7 @@
           btn.classList.remove('btn-outline-danger', 'delete-account-btn');
           btn.classList.add('btn-outline-success', 'activate-account-btn');
           btn.title = "Activate Account";
-          btn.innerHTML = '<i class="bi bi-check-circle"></i> Activate';
+          btn.innerHTML = '<i class="bi bi-check-circle"></i> Kích hoạt';
         }
       } else if(e.target.closest('.activate-account-btn')) {
         const btn = e.target.closest('.activate-account-btn');
@@ -392,7 +422,7 @@
           btn.classList.remove('btn-outline-success', 'activate-account-btn');
           btn.classList.add('btn-outline-danger', 'delete-account-btn');
           btn.title = "Deactivate Account";
-          btn.innerHTML = '<i class="bi bi-x-circle"></i> Deactivate';
+          btn.innerHTML = '<i class="bi bi-x-circle"></i> Vô hiệu hóa';
         }
       }
     });
@@ -425,12 +455,12 @@
         <td>${updatedAccount.email}</td>
         <td>${updatedAccount.role}</td>
         <td>${createStatusBadge(updatedAccount.status)}</td>
-        <td>
+       <td>
           <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Edit Account">
-            <i class="bi bi-pencil-square"></i> Edit
+            <i class="bi bi-pencil-square"></i> Chỉnh sửa
           </button>
-          <button class="btn btn-sm btn-outline-${updatedAccount.status === 'Active' ? 'danger delete-account-btn' : 'success activate-account-btn'}" type="button" title="${updatedAccount.status === 'Active' ? 'Deactivate Account' : 'Activate Account'}">
-            <i class="bi bi-${updatedAccount.status === 'Active' ? 'x-circle' : 'check-circle'}"></i> ${updatedAccount.status === 'Active' ? 'Deactivate' : 'Activate'}
+          <button class="btn btn-sm btn-outline-${newAccount.status === 'Active' ? 'danger delete-account-btn' : 'success activate-account-btn'}" type="button" title="${newAccount.status === 'Active' ? 'Deactivate Account' : 'Activate Account'}">
+            <i class="bi bi-${newAccount.status === 'Active' ? 'x-circle' : 'check-circle'}"></i> ${newAccount.status === 'Active' ? 'Vô hiệu hóa' : 'Kích hoạt'}
           </button>
         </td>
       `;
