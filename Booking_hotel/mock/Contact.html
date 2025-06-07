@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="Contact.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="../jquery-3.7.1.js"></script>
+     <script>
+    $(document).ready(function() {
+      $('#header').load('header.html');
+      $('#footer').load('footer.html');
+      $('#quaylai').load('quaylai.html'); // Tải nội dung từ header.html
+    });
+  </script>
+</head>
+<div id="header"></div> <!-- Vị trí để chèn header -->
+
+    <div class="hero-section">
+        <div class="overlay">
+            <div class="content">
+                <h2>Liên hệ với chúng tôi</h2>
+                <p><a href="home.html">TRANG CHỦ</a> <span>&gt;</span> LIÊN HỆ</p>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-xl shadow-[0_0_30px_#f0f0f0] p-10">
+            <h2 class="relative text-3xl font-bold text-[#0c1a3e] mb-14 text-center mx-auto inline-block group">
+                Thông Tin Liên Hệ
+                <!-- Line gray -->
+                <span class="absolute left-0 bottom-0 w-full h-[1px] bg-[#d1d5db]"></span>
+                <!-- Line red (animated) -->
+                <span
+                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-[2px] bg-[#e03c3c] animate-pulse-motion"></span>
+            </h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-20 text-center text-[#0c1a3e]">
+                <div class="flex flex-col items-center max-w-xs">
+                    <div class="bg-[#e03c3c] rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-lg"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Địa chỉ trụ sở</h3>
+                    <p class="text-gray-500 text-sm">147 Mai Dịch, Cầu Giấy, Hà Nội</p>
+                </div>
+                <div class="flex flex-col items-center max-w-xs">
+                    <div class="bg-[#e03c3c] rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                        <i class="fas fa-phone-alt text-white text-lg"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Liên hệ hỗ trợ 24/7</h3>
+                    <p class="text-gray-500 text-sm">02422420777</p>
+                </div>
+                <div class="flex flex-col items-center max-w-xs">
+                    <div class="bg-[#e03c3c] rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                        <i class="fas fa-envelope text-white text-lg"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Email</h3>
+                    <p class="text-gray-500 text-sm">nhom12@web.com.vn</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="max-w-[80rem] mx-auto rounded-xl bg-[#f0f4f7] p-10 md:p-16">
+        <h2 class="text-center text-[#121c2a] text-4xl font-extrabold mb-3">
+            Gửi Lời Nhắn Cho Chúng Tôi
+        </h2>
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[90rem]">
+            <div class="relative">
+                <input type="text" placeholder="Nhập tên của bạn"
+                    class="w-full bg-white border border-transparent focus:border-gray-300 rounded-md py-4 px-5 pr-12 text-gray-700 placeholder-gray-500" />
+                <i class="fas fa-user absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="relative">
+                <input type="email" placeholder="Nhập Email của bạn"
+                    class="w-full bg-white border border-transparent focus:border-gray-300 rounded-md py-4 px-5 pr-12 text-gray-700 placeholder-gray-500" />
+                <i class="fas fa-envelope absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="relative">
+                <input type="tel" placeholder="Nhập số điện thoại"
+                    class="w-full bg-white border border-transparent focus:border-gray-300 rounded-md py-4 px-5 pr-12 text-gray-700 placeholder-gray-500" />
+                <i class="fas fa-phone-alt absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="relative">
+                <select
+                    class="w-full bg-white border border-transparent focus:border-gray-300 rounded-md py-4 px-5 pr-12 text-gray-700 placeholder-gray-500 appearance-none"
+                    aria-label="Option">
+                    <option disabled selected>Lựa chọn</option>
+                    <option>Phòng Tiêu chuẩn</option>
+                    <option>Phòng Cao cấp</option>
+                    <option>Phòng Đôi / Phòng Đơn</option>
+                    <option>Phòng Gia đình</option>
+                    <option>Phòng Hướng biển / Hướng vườn</option>
+
+                </select>
+                <i class="fas fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="relative md:col-span-2">
+                <textarea placeholder="Nhập lời nhắn của bạn" rows="4"
+                    class="w-full bg-white border border-transparent focus:border-gray-300 rounded-md py-4 px-5 pr-12 text-gray-700 placeholder-gray-500 resize-none"></textarea>
+                <i class="fas fa-pencil-alt absolute right-4 top-4 text-gray-400 pointer-events-none"
+                    aria-hidden="true"></i>
+            </div>
+        </form>
+        <div class="flex justify-center mt-10">
+            <button
+                class="bg-[#d93b3b] text-white font-semibold text-sm uppercase px-8 py-4 rounded-md shadow-[0_0_20px_#d93b3b] hover:shadow-[0_0_30px_#d93b3b] transition-shadow">
+                Gửi lời nhắn
+            </button>
+        </div>
+    </section>
+    <button aria-label="Scroll to top"
+        class="fixed bottom-6 right-6 w-12 h-12 rounded-full border border-[#d93b3b] text-[#d93b3b] flex items-center justify-center hover:bg-[#d93b3b] hover:text-white transition-colors">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <section class="max-w mx-auto my-6 px-2">
+        <div id="map" class="w-full h-[400px] rounded-xl shadow-lg border border-gray-200"></div>
+      </section>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([21.0285, 105.804], 12); // Tọa độ và mức zoom
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        const marker = L.marker([21.0285, 105.804]).addTo(map); // Thêm marker
+    </script>
+      <div id="footer"></div>
+  <div id="quaylai"></div>
+</body>
+
+</html>

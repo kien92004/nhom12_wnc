@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương Trình Khuyến Mãi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://cdn.baolaocai.vn/images/ea9a7581889b1cb42fbb1c5544c1eaafa80776b455016ded7d21b53f49c9321ebf4b8210e7f4d082f450445a514297bfe171b1095053e36b8e7c0c8a30c93f2f/qc.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* Container chính */
+        .main-container {
+            width: 90%;
+            max-width: 800px;
+            background: linear-gradient(135deg, #ffffff4f, #f8f8f800);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Tiêu đề chính */
+        h1 {
+            text-align: center;
+            color: #ff5722;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tiêu đề section */
+        h2 {
+            color: #ff4081;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ff4081;
+            padding-bottom: 5px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fce4ec;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Danh sách */
+        .list {
+            margin-left: 15px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .list-item {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #333;
+            padding: 10px 15px;
+            border-left: 4px solid #ff4081;
+            background-color: #ffe5f2;
+            border-radius: 0 5px 5px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-item i {
+            margin-right: 10px;
+            color: #ff4081;
+        }
+
+        /* Highlight */
+        .highlight {
+            color: #ff4081;
+            font-weight: bold;
+        }
+
+        /* Nút quay lại */
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: fit-content;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #e65c50;
+            transform: scale(1.05);
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .main-container {
+                padding: 20px;
+            }
+            .list-item {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Container chính -->
+    <div class="main-container">
+        <h1>Chương Trình Khuyến Mãi</h1>
+
+        <div class="section">
+            <h2>Thời Gian Khuyến Mãi:</h2>
+            <p><i class="fas fa-calendar-alt"></i> Từ: <span class="highlight">01/06/2025</span></p>
+            <p><i class="fas fa-calendar-alt"></i> Đến: <span class="highlight">30/08/2025</span></p>
+        </div>
+
+        <div class="section">
+            <h2>Những Gì Chúng Tôi Cung Cấp:</h2>
+            <ul class="list">
+                <li class="list-item"><i class="fas fa-plane"></i>
+                    Khám phá những địa điểm tuyệt vời với giá cả phải chăng.<br>
+                    Hỗ trợ giá vé vào các khu vui chơi, tắm biển đến 20%<br>
+                    Hỗ trợ giá vé cầu kính, khinh khí cầu, cano, lướt sóng lên tới 15%
+                </li>
+                <li class="list-item"><i class="fas fa-hotel"></i> Khách sạn: Nghỉ ngơi tại những khách sạn sang trọng với mức giá ưu đãi.</li>
+                <li class="list-item"><i class="fas fa-umbrella-beach"></i> Hoạt động giải trí: Tham gia các hoạt động thú vị như lặn biển, tham quan, và nhiều hơn nữa!</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Cách Tham Gia:</h2>
+            <ol class="list">
+                <li class="list-item"><i class="fas fa-globe"></i> Truy cập trang web của chúng tôi.</li>
+                <li class="list-item"><i class="fas fa-shopping-cart"></i> Chọn sản phẩm hoặc dịch vụ bạn muốn.</li>
+                <li class="list-item"><i class="fas fa-ticket-alt"></i> Nhập mã khuyến mãi: <span class="highlight">SUMMER50</span> khi thanh toán.</li>
+            </ol>
+        </div>
+
+        <a href="home.html" class="back-link">Quay Lại Trang Chủ</a>
+    </div>
+</body>
+</html>

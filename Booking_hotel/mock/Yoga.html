@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Boi.css">
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <title>Services</title>
+  <script src="../jquery-3.7.1.js"></script>
+  <script src="../js/quaylai.js"></script>
+  <script src="../js/header.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#header').load('header.html');
+      $('#footer').load('footer.html');
+      $('#quaylai').load('quaylai.html'); // Tải nội dung từ header.html
+    });
+  </script>
+</head>
+
+<body>
+    <div id="header"></div> <!-- Vị trí để chèn header -->
+
+  <div class="hero-section"
+    style="background-image: url('../img/thiet-ke-phong-tap-yoga.jpg');">
+    <div class="overlay">
+      <div class="content">
+        <h2>Thông tin dịch vụ Phòng tập Yoga</h2>
+        <p><a href="Services.html">TRANG CHỦ</a> <span>&gt;</span> DỊCH VỤ PHÒNG GOGA</p>
+      </div>
+    </div>
+  </div>
+  <div id="wrapper">
+    <section class="service-section">
+      <div class="service-image">
+        <img src="https://res.cloudinary.com/hoahien/image/upload/v1744513733/ne70jcd166u0v9ymm23k.jpg"
+          alt="Phòng bơi" />
+      </div>
+      <div class="service-content">
+        <h5 class="sub-title">PHÒNG TẬP YOGA</h5>
+        <h2 class="main-title">Cân Bằng Tâm Trí & Cơ Thể</h2>
+        <p>
+          Tận hưởng không gian phòng tập hiện đại và tiện nghi ngay trong khách sạn, nơi bạn có thể duy trì thói quen
+          rèn luyện sức khỏe mọi lúc.
+          Trang bị đầy đủ thiết bị luyện tập từ cardio, tạ tự do đến máy tập chuyên sâu, phòng gym của chúng tôi đáp ứng
+          mọi nhu cầu tập luyện từ cơ bản đến chuyên nghiệp.
+          Hãy giữ phong độ và năng lượng trong suốt kỳ nghỉ hoặc chuyến công tác của bạn tại đây
+        </p>
+        <div class="view-button">
+          <a href="booking_services.html">
+            ĐẶT PHÒNG
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="popular-dishes" id="gym-list">
+    <div class="section-header">
+      <p class="sub-heading">Danh sách phòng tập Yoga</p>
+      <h2 class="main-heading">Phòng Yoga bạn nên thử</h2>
+    </div>
+
+    <div class="dishes-container gym-options">
+      <!-- YOGA 1 -->
+      <div class="dish-card gym-card">
+        <img src="https://res.cloudinary.com/hoahien/image/upload/v1744519483/mbj3iyih1h3x6ijfgw0e.jpg"
+          alt="Phòng Yoga Thiền Định" class="gym-img" />
+        <h3 class="gym-title">Phòng Yoga Thiền Định</h3>
+        <div class="menu-item gym-feature">
+          <strong>Không gian yên tĩnh</strong><span class="check-icon">✓</span>
+          <p class="feature-desc">Phòng tập được cách âm, ánh sáng nhẹ, giúp dễ dàng thiền định.</p>
+        </div>
+        <div class="menu-item gym-feature">
+          <strong>Hướng dẫn viên chuyên nghiệp</strong><span class="check-icon">✓</span>
+          <p class="feature-desc">Giảng viên nhiều năm kinh nghiệm, hỗ trợ từng học viên.</p>
+        </div>
+      </div>
+      <!-- YOGA 2 -->
+      <div class="dish-card gym-card">
+        <img src="https://res.cloudinary.com/hoahien/image/upload/v1744513732/grr1bsloguupqssznbex.jpg"
+          alt="Phòng Yoga Nóng" class="gym-img" />
+        <h3 class="gym-title">Phòng Yoga Nóng</h3>
+        <div class="menu-item gym-feature">
+          <strong>Giữ nhiệt tiêu chuẩn</strong><span class="check-icon">✓</span>
+          <p class="feature-desc">Nhiệt độ 35–40°C giúp cơ thể đốt cháy calo hiệu quả.</p>
+        </div>
+        <div class="menu-item gym-feature">
+          <strong>Thải độc và giảm stress</strong><span class="check-icon">✓</span>
+          <p class="feature-desc">Bài tập giúp đào thải độc tố và tăng sự dẻo dai.</p>
+        </div>
+      </div>
+
+      <!-- YOGA 3 -->
+      <div class="dish-card gym-card">
+        <img src="https://res.cloudinary.com/hoahien/image/upload/v1744519483/pdzkgpwbtiys9avp8erv.jpg"
+          alt="Phòng Yoga Cho Người Mới" class="gym-img" />
+        <h3 class="gym-title">Phòng Yoga Cho Người Mới</h3>
+        <div class="menu-item gym-feature">
+          <strong>Hướng dẫn cơ bản</strong><span class="check-icon">✓</span>
+          <p class="feature-desc">Lớp học dành riêng cho người chưa từng tập Yoga.</p>
+        </div>
+        <div class="menu-item gym-feature">
+          <strong>Động tác đơn giản</strong><span class="check-icon">✓</span>
+          <p class="feature-desc">Tư thế dễ tiếp cận, giúp bạn làm quen từng bước.</p>
+        </div>
+      </div>
+
+      <!-- YOGA 4 -->
+      <div class="dish-card gym-card">
+        <img src="https://res.cloudinary.com/hoahien/image/upload/v1744519488/j5sl8vph2vzctpwbbftl.jpg"
+          alt="Phòng Yoga Ngoài Trời" class="gym-img" />
+        <h3 class="gym-title">Phòng Yoga Ngoài Trời</h3>
+        <div class="menu-item gym-feature">
+          <strong>Không gian thiên nhiên</strong><span class="check-icon">✓</span>
+          <p class="feature-desc">Tập luyện giữa cây xanh và không khí trong lành.</p>
+        </div>
+        <div class="menu-item gym-feature">
+          <strong>Giúp thư giãn tinh thần</strong><span class="check-icon">✓</span>
+          <p class="feature-desc">Phù hợp với người cần phục hồi năng lượng sau căng thẳng.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <div class="slider-container overflow-hidden relative px-16">
+    <div class="slider flex transition-all duration-1000 ease-in-out space-x-6">
+      <!-- Phần tử 1 -->
+      <div class="card bg-white p-6 rounded-lg shadow-lg flex-shrink-0">
+        <div class="flex items-center mb-4">
+          <img class="w-16 h-16 rounded-full mr-4"
+            src="https://res.cloudinary.com/hoahien/image/upload/v1744523612/byepacggukqzrvbilfhh.jpg" alt="Trainer 1">
+          <p class="text-gray-600">
+            HLV bơi với 10 năm kinh nghiệm, chuyên dạy bơi sải và bơi ếch cho người lớn.
+          </p>
+        </div>
+        <hr class="my-4" />
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-lg font-bold">Nguyễn Văn A</h3>
+            <p class="text-red-500">Huấn luyện viên</p>
+          </div>
+          <div class="flex items-center text-yellow-500">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span class="ml-2 text-gray-600">(5.0)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phần tử 2 -->
+      <div class="card bg-white p-6 rounded-lg shadow-lg flex-shrink-0">
+        <div class="flex items-center mb-4">
+          <img class="w-16 h-16 rounded-full mr-4"
+            src="https://res.cloudinary.com/hoahien/image/upload/v1744523612/xstapzrmduuqucybq58t.jpg" alt="Trainer 2">
+          <p class="text-gray-600">
+            VĐV bơi đạt HCV toàn quốc, chuyên huấn luyện trẻ em & người mới bắt đầu.
+          </p>
+        </div>
+        <hr class="my-4" />
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-lg font-bold">Trần Thị B</h3>
+            <p class="text-red-500">Vận động viên</p>
+          </div>
+          <div class="flex items-center text-yellow-500">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span class="ml-2 text-gray-600">(5.0)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thêm phần tử 3-->
+      <div class="card bg-white p-6 rounded-lg shadow-lg flex-shrink-0">
+        <div class="flex items-center mb-4">
+          <img class="w-16 h-16 rounded-full mr-4"
+            src="https://res.cloudinary.com/hoahien/image/upload/v1744523612/xtwy3dsuadsxdox1ndeh.jpg" alt="Trainer 3">
+          <p class="text-gray-600">
+            Chuyên gia dạy bơi sinh tồn, đã đào tạo hơn 500 học viên trong 3 năm qua.
+          </p>
+        </div>
+        <hr class="my-4" />
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-lg font-bold">Phạm Minh C</h3>
+            <p class="text-red-500">Chuyên gia kỹ thuật</p>
+          </div>
+          <div class="flex items-center text-yellow-500">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span class="ml-2 text-gray-600">(5.0)</span>
+          </div>
+        </div>
+      </div>
+      <!-- Thêm phần tử 4-->
+      <div class="card bg-white p-6 rounded-lg shadow-lg flex-shrink-0">
+        <div class="flex items-center mb-4">
+          <img class="w-16 h-16 rounded-full mr-4"
+            src="https://res.cloudinary.com/hoahien/image/upload/v1744523612/i4u5bsop4gbhhnkcwip9.jpg" alt="Trainer 3">
+          <p class="text-gray-600">
+            Chuyên gia dạy bơi sinh tồn, đã đào tạo hơn 500 học viên trong 3 năm qua.
+          </p>
+        </div>
+        <hr class="my-4" />
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-lg font-bold">Phạm Minh C</h3>
+            <p class="text-red-500">Chuyên gia kỹ thuật</p>
+          </div>
+          <div class="flex items-center text-yellow-500">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span class="ml-2 text-gray-600">(5.0)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phần tử 5 -->
+      <div class="card bg-white p-6 rounded-lg shadow-lg flex-shrink-0">
+        <div class="flex items-center mb-4">
+          <img class="w-16 h-16 rounded-full mr-4"
+            src="https://res.cloudinary.com/hoahien/image/upload/v1744523612/xtwy3dsuadsxdox1ndeh.jpg" alt="Trainer 2">
+          <p class="text-gray-600">
+            VĐV bơi đạt HCV toàn quốc, chuyên huấn luyện trẻ em & người mới bắt đầu.
+          </p>
+        </div>
+        <hr class="my-4" />
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-lg font-bold">Trần Thị E</h3>
+            <p class="text-red-500">Vận động viên</p>
+          </div>
+          <div class="flex items-center text-yellow-500">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span class="ml-2 text-gray-600">(5.0)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+  <div id="quaylai"></div>
+  <script src="..//js/Service.js"></script>
+  <script src="../js/quaylai.js"></script>
+</body>
+
+</html>

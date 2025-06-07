@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HIbel Admin - Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      background: #f8f9fa;
+    }
+    #sidebar {
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #343a40;
+      padding-top: 56px;
+      overflow-y: auto;
+    }
+    #sidebar .nav-link {
+      color: #adb5bd;
+      font-weight: 600;
+    }
+    #sidebar .nav-link.active, #sidebar .nav-link:hover {
+      background-color: #495057;
+      color: #fff;
+      border-radius: 0.375rem;
+    }
+    main {
+      margin-left: 240px;
+      padding: 2rem;
+      width: 100%;
+    }
+    .card {
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 767.98px) {
+      #sidebar {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        z-index: 1030;
+        padding-top: 0;
+      }
+      main {
+        margin-left: 0;
+        padding-top: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark fixed-top d-md-none">
+    <div class="container-fluid">
+      <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" aria-label="Toggle sidebar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand ms-2" href="#">HIbel Admin</a>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="d-none d-md-block">
+    <div class="p-3 text-white fs-5 fw-bold">Hibel Admin</div>
+    <nav class="nav flex-column px-2">
+      <a class="nav-link active" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
+      <a class="nav-link" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
+      <a class="nav-link" href="order.html"><i class="bi bi-cart-fill me-2"></i>Phòng đặt</a>
+      <a class="nav-link" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
+      <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
+      <a class="nav-link" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ </a>
+      <a class="nav-link" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
+      
+    </nav>
+  </div>
+
+  <!-- Offcanvas Sidebar for small screens -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header bg-dark text-white">
+      <h5 class="offcanvas-title" id="offcanvasSidebarLabel">HIbel Admin</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <nav class="nav flex-column">
+        <a class="nav-link active px-3 py-2" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
+        <a class="nav-link px-3 py-2" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
+        <a class="nav-link px-3 py-2" href="order.html"><i class="bi bi-cart-fill me-2"></i> Phòng đặt</a>
+        <a class="nav-link px-3 py-2" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
+        <a class="nav-link px-3 py-2" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
+        <a class="nav-link px-3 py-2" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ</a>
+        <a class="nav-link px-3 py-2" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
+        
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main>
+    <h1 class="mb-4">Trang chủ</h1>
+
+    <!-- Report Filter -->
+    <div class="d-flex align-items-center mb-4">
+      <label class="me-3 fw-semibold">Thời gian :</label>
+      <div class="btn-group" role="group" aria-label="Report period toggle" id="periodToggle">
+        <input type="radio" class="btn-check" name="periodOptions" id="periodDay" autocomplete="off" value="day" checked />
+        <label class="btn btn-outline-primary" for="periodDay">Ngày </label>
+
+        <input type="radio" class="btn-check" name="periodOptions" id="periodWeek" autocomplete="off" value="week" />
+        <label class="btn btn-outline-primary" for="periodWeek">Tuần</label>
+
+        <input type="radio" class="btn-check" name="periodOptions" id="periodMonth" autocomplete="off" value="month" />
+        <label class="btn btn-outline-primary" for="periodMonth">Tháng</label>
+      </div>
+    </div>
+
+    <div class="row gy-4 mb-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Tổng số phòng đặt </h5>
+            <p class="display-5 m-0" id="totalBookings">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-success">
+          <div class="card-body">
+            <h5 class="card-title">Tổng doanh thu</h5>
+            <p class="display-5 m-0 text-success" id="totalRevenue">VND </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-primary">
+          <div class="card-body">
+            <h5 class="card-title">Phòng đang hoạt động </h5>
+            <p class="display-5 m-0 text-primary" id="activeRooms">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chart for detailed report -->
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <canvas id="reportChart" height="150"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const reportData = {
+      day: {
+        summary: { totalBookings: 12, totalRevenue: 8800000, activeRooms: 15 },
+        chartLabels: ['12am', '4am', '8am', '12pm', '4pm', '8pm'],
+        chartData: [2, 1, 3, 4, 1, 1]
+      },
+      week: {
+        summary: { totalBookings: 95, totalRevenue: 34480000, activeRooms: 65 },
+        chartLabels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        chartData: [10, 12, 15, 14, 16, 18, 10]
+      },
+      month: {
+        summary: { totalBookings: 345, totalRevenue: 118940000, activeRooms: 78 },
+        chartLabels: ['Tuần 1', 'Tuần 2', 'Tuần 3', 'Tuần 4'],
+        chartData: [80, 90, 85, 90]
+      }
+    };
+
+    const totalBookingsElem = document.getElementById('totalBookings');
+    const totalRevenueElem = document.getElementById('totalRevenue');
+    const activeRoomsElem = document.getElementById('activeRooms');
+    const ctx = document.getElementById('reportChart').getContext('2d');
+
+    let currentChart = null;
+
+    function updateReport(period) {
+      const data = reportData[period];
+      totalBookingsElem.textContent = data.summary.totalBookings;
+      totalRevenueElem.textContent =  data.summary.totalRevenue.toLocaleString() + '   VND';
+      activeRoomsElem.textContent = data.summary.activeRooms;
+
+      // Update chart
+      if (currentChart) {
+        currentChart.destroy();
+      }
+
+      currentChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: data.chartLabels,
+          datasets: [{
+            label: 'Bookings',
+            data: data.chartData,
+            backgroundColor: 'rgba(13,110,253,0.7)',
+            borderRadius: 4,
+            maxBarThickness: 45
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: { mode: 'index', intersect: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { stepSize: 1 },
+              title: {
+                display: true,
+                text: 'Số lượng đặt phòng'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: period === 'day' ? 'Ngày' : period === 'week' ? 'Tuần ' : 'Tháng'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Initialize with day
+    updateReport('day');
+
+    document.querySelectorAll('input[name="periodOptions"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.checked) {
+          updateReport(radio.value);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

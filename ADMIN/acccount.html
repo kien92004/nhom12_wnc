@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HIbel Admin - Accounts</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      background: #f8f9fa;
+    }
+    #sidebar {
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #343a40;
+      padding-top: 56px;
+      overflow-y: auto;
+    }
+    #sidebar .nav-link {
+      color: #adb5bd;
+      font-weight: 600;
+    }
+    #sidebar .nav-link.active, #sidebar .nav-link:hover {
+      background-color: #495057;
+      color: #fff;
+      border-radius: 0.375rem;
+    }
+    main {
+      margin-left: 240px;
+      padding: 2rem;
+      width: 100%;
+    }
+    @media (max-width: 767.98px) {
+      #sidebar {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        z-index: 1030;
+        padding-top: 0;
+      }
+      main {
+        margin-left: 0;
+        padding-top: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark fixed-top d-md-none">
+  <div class="container-fluid">
+    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" aria-label="Chuyển đổi thanh bên">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand ms-2" href="#">Quản trị viên HIbel</a>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+ <div id="sidebar" class="d-none d-md-block">
+    <div class="p-3 text-white fs-5 fw-bold">Hibel Admin</div>
+    <nav class="nav flex-column px-2">
+      <a class="nav-link " href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
+      <a class="nav-link" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
+      <a class="nav-link" href="order.html"><i class="bi bi-cart-fill me-2"></i>Phòng đặt</a>
+      <a class="nav-link" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
+      <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
+      <a class="nav-link" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ </a>
+      <a class="nav-link active" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
+      
+    </nav>
+  </div>
+
+  <!-- Offcanvas Sidebar for small screens -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header bg-dark text-white">
+      <h5 class="offcanvas-title" id="offcanvasSidebarLabel">HIbel Admin</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <nav class="nav flex-column">
+        <a class="nav-link  px-3 py-2" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
+        <a class="nav-link px-3 py-2" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
+        <a class="nav-link px-3 py-2" href="order.html"><i class="bi bi-cart-fill me-2"></i> Phòng đặt</a>
+        <a class="nav-link px-3 py-2" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
+        <a class="nav-link px-3 py-2" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
+        <a class="nav-link px-3 py-2" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ</a>
+        <a class="nav-link active px-3 py-2" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
+        
+      </nav>
+    </div>
+  </div>
+
+<!-- Main content -->
+<main>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Quản lý Tài khoản</h1>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAccountModal">
+      <i class="bi bi-plus-lg me-1"></i> Thêm Tài khoản Mới
+    </button>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover align-middle" id="accountsTable">
+      <thead class="table-dark">
+        <tr>
+          <th>ID Người dùng</th>
+          <th>Tên</th>
+          <th>Email</th>
+          <th>Vai trò</th>
+          <th>Trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-account='{"id":"U001","name":"Quản trị viên HIbel","email":"admin@hibelhotel.com","role":"Quản trị viên","status":"Hoạt động"}'>
+          <td>U001</td>
+          <td>Quản trị viên HIbel</td>
+          <td>admin@hibelhotel.com</td>
+          <td>Quản trị viên</td>
+          <td><span class="badge bg-success">Hoạt động</span></td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Chỉnh sửa Tài khoản">
+              <i class="bi bi-pencil-square"></i> Chỉnh sửa
+            </button>
+            <button class="btn btn-sm btn-outline-danger delete-account-btn" type="button" title="Vô hiệu hóa Tài khoản">
+              <i class="bi bi-x-circle"></i> Vô hiệu hóa
+            </button>
+          </td>
+        </tr>
+        <tr data-account='{"id":"U002","name":"Khách hàng Jane","email":"jane@example.com","role":"Khách hàng","status":"Không hoạt động"}'>
+          <td>U002</td>
+          <td>Khách hàng Jane</td>
+          <td>jane@example.com</td>
+          <td>Khách hàng</td>
+          <td><span class="badge bg-secondary">Không hoạt động</span></td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Chỉnh sửa Tài khoản">
+              <i class="bi bi-pencil-square"></i> Chỉnh sửa
+            </button>
+            <button class="btn btn-sm btn-outline-success activate-account-btn" type="button" title="Kích hoạt Tài khoản">
+              <i class="bi bi-check-circle"></i> Kích hoạt
+            </button>
+          </td>
+        </tr>
+        <tr data-account='{"id":"U003","name":"Nhân viên","email":"staff@hibelhotel.com","role":"Nhân viên","status":"Hoạt động"}'>
+          <td>U003</td>
+          <td>Nhân viên</td>
+          <td>staff@hibelhotel.com</td>
+          <td>Nhân viên</td>
+          <td><span class="badge bg-success">Hoạt động</span></td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Chỉnh sửa Tài khoản">
+              <i class="bi bi-pencil-square"></i> Chỉnh sửa
+            </button>
+            <button class="btn btn-sm btn-outline-danger delete-account-btn" type="button" title="Vô hiệu hóa Tài khoản">
+              <i class="bi bi-x-circle"></i> Vô hiệu hóa
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<!-- Add Account Modal -->
+<div class="modal fade" id="addAccountModal" tabindex="-1" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content" id="addAccountForm" novalidate>
+      <div class="modal-header">
+        <h5 class="modal-title" id="addAccountModalLabel">Thêm Tài khoản Mới</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="addAccountID" class="form-label">ID Người dùng</label>
+          <input type="text" class="form-control" id="addAccountID" required />
+          <div class="invalid-feedback">ID Người dùng là bắt buộc.</div>
+        </div>
+        <div class="mb-3">
+          <label for="addAccountName" class="form-label">Tên</label>
+          <input type="text" class="form-control" id="addAccountName" required />
+          <div class="invalid-feedback">Tên là bắt buộc.</div>
+        </div>
+        <div class="mb-3">
+          <label for="addAccountEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="addAccountEmail" required />
+          <div class="invalid-feedback">Email hợp lệ là bắt buộc.</div>
+        </div>
+        <div class="mb-3">
+          <label for="addAccountRole" class="form-label">Vai trò</label>
+          <select class="form-select" id="addAccountRole" required>
+            <option value="" disabled selected>Chọn vai trò</option>
+            <option value="Administrator">Quản trị viên</option>
+            <option value="Customer">Khách hàng</option>
+            <option value="Staff">Nhân viên</option>
+          </select>
+          <div class="invalid-feedback">Vui lòng chọn một vai trò.</div>
+        </div>
+        <div class="mb-3">
+          <label for="addAccountStatus" class="form-label">Trạng thái</label>
+          <select class="form-select" id="addAccountStatus" required>
+            <option value="" disabled selected>Chọn trạng thái</option>
+            <option value="Active">Hoạt động</option>
+            <option value="Inactive">Không hoạt động</option>
+          </select>
+          <div class="invalid-feedback">Vui lòng chọn một trạng thái.</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+        <button type="submit" class="btn btn-success">Thêm Tài khoản</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Edit Account Modal -->
+<div class="modal fade" id="editAccountModal" tabindex="-1" aria-labelledby="editAccountModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content" id="editAccountForm" novalidate>
+      <div class="modal-header">
+        <h5 class="modal-title" id="editAccountModalLabel">Chỉnh sửa Tài khoản</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="editAccountRowIndex" />
+        <div class="mb-3">
+          <label for="editAccountID" class="form-label">ID Người dùng</label>
+          <input type="text" class="form-control" id="editAccountID" required />
+          <div class="invalid-feedback">ID Người dùng là bắt buộc.</div>
+        </div>
+        <div class="mb-3">
+          <label for="editAccountName" class="form-label">Tên</label>
+          <input type="text" class="form-control" id="editAccountName" required />
+          <div class="invalid-feedback">Tên là bắt buộc.</div>
+        </div>
+        <div class="mb-3">
+          <label for="editAccountEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="editAccountEmail" required />
+          <div class="invalid-feedback">Email hợp lệ là bắt buộc.</div>
+        </div>
+        <div class="mb-3">
+          <label for="editAccountRole" class="form-label">Vai trò</label>
+          <select class="form-select" id="editAccountRole" required>
+            <option value="" disabled>Chọn vai trò</option>
+            <option value="Administrator">Quản trị viên</option>
+            <option value="Customer">Khách hàng</option>
+            <option value="Staff">Nhân viên</option>
+          </select>
+          <div class="invalid-feedback">Vui lòng chọn một vai trò.</div>
+        </div>
+        <div class="mb-3">
+          <label for="editAccountStatus" class="form-label">Trạng thái</label>
+          <select class="form-select" id="editAccountStatus" required>
+            <option value="" disabled>Chọn trạng thái</option>
+            <option value="Active">Hoạt động</option>
+            <option value="Inactive">Không hoạt động</option>
+          </select>
+          <div class="invalid-feedback">Vui lòng chọn một trạng thái.</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+        <button type="submit" class="btn btn-primary">Lưu Thay đổi</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const accountsTableBody = document.querySelector('#accountsTable tbody');
+    const addAccountModal = new bootstrap.Modal(document.getElementById('addAccountModal'));
+    const editAccountModal = new bootstrap.Modal(document.getElementById('editAccountModal'));
+
+    // Add Account Form Elements
+    const addAccountForm = document.getElementById('addAccountForm');
+    const addAccountID = document.getElementById('addAccountID');
+    const addAccountName = document.getElementById('addAccountName');
+    const addAccountEmail = document.getElementById('addAccountEmail');
+    const addAccountRole = document.getElementById('addAccountRole');
+    const addAccountStatus = document.getElementById('addAccountStatus');
+
+    // Edit Account Form Elements
+    const editAccountForm = document.getElementById('editAccountForm');
+    const editAccountRowIndex = document.getElementById('editAccountRowIndex');
+    const editAccountID = document.getElementById('editAccountID');
+    const editAccountName = document.getElementById('editAccountName');
+    const editAccountEmail = document.getElementById('editAccountEmail');
+    const editAccountRole = document.getElementById('editAccountRole');
+    const editAccountStatus = document.getElementById('editAccountStatus');
+
+    // Helper: Create badge HTML by status
+    function createStatusBadge(status) {
+      return status === 'Active'
+        ? '<span class="badge bg-success">Active</span>'
+        : '<span class="badge bg-secondary">Inactive</span>';
+    }
+
+    // Add Account
+    addAccountForm.addEventListener('submit', e => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (!addAccountForm.checkValidity()) {
+        addAccountForm.classList.add('was-validated');
+        return;
+      }
+
+      const newAccount = {
+        id: addAccountID.value.trim(),
+        name: addAccountName.value.trim(),
+        email: addAccountEmail.value.trim(),
+        role: addAccountRole.value,
+        status: addAccountStatus.value
+      };
+
+      const tr = document.createElement('tr');
+      tr.dataset.account = JSON.stringify(newAccount);
+      tr.innerHTML = `
+        <td>${newAccount.id}</td>
+        <td>${newAccount.name}</td>
+        <td>${newAccount.email}</td>
+        <td>${newAccount.role}</td>
+        <td>${createStatusBadge(newAccount.status)}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Edit Account">
+            <i class="bi bi-pencil-square"></i> Edit
+          </button>
+          <button class="btn btn-sm btn-outline-${newAccount.status === 'Active' ? 'danger delete-account-btn' : 'success activate-account-btn'}" type="button" title="${newAccount.status === 'Active' ? 'Deactivate Account' : 'Activate Account'}">
+            <i class="bi bi-${newAccount.status === 'Active' ? 'x-circle' : 'check-circle'}"></i> ${newAccount.status === 'Active' ? 'Deactivate' : 'Activate'}
+          </button>
+        </td>
+      `;
+      accountsTableBody.appendChild(tr);
+
+      addAccountForm.reset();
+      addAccountForm.classList.remove('was-validated');
+      addAccountModal.hide();
+    });
+
+    // Edit Account - Delegated event listener
+    accountsTableBody.addEventListener('click', e => {
+      if (e.target.closest('.edit-account-btn')) {
+        const btn = e.target.closest('.edit-account-btn');
+        const tr = btn.closest('tr');
+
+        const accountData = JSON.parse(tr.dataset.account);
+
+        editAccountRowIndex.value = Array.from(accountsTableBody.children).indexOf(tr);
+        editAccountID.value = accountData.id;
+        editAccountName.value = accountData.name;
+        editAccountEmail.value = accountData.email;
+        editAccountRole.value = accountData.role;
+        editAccountStatus.value = accountData.status;
+
+        editAccountForm.classList.remove('was-validated');
+        editAccountModal.show();
+      } else if(e.target.closest('.delete-account-btn')) {
+        const btn = e.target.closest('.delete-account-btn');
+        const tr = btn.closest('tr');
+        if(confirm('Are you sure you want to deactivate this account?')) {
+          // Change status to Inactive
+          const account = JSON.parse(tr.dataset.account);
+          account.status = 'Inactive';
+          tr.dataset.account = JSON.stringify(account);
+          tr.cells[4].innerHTML = createStatusBadge(account.status);
+          btn.classList.remove('btn-outline-danger', 'delete-account-btn');
+          btn.classList.add('btn-outline-success', 'activate-account-btn');
+          btn.title = "Activate Account";
+          btn.innerHTML = '<i class="bi bi-check-circle"></i> Activate';
+        }
+      } else if(e.target.closest('.activate-account-btn')) {
+        const btn = e.target.closest('.activate-account-btn');
+        const tr = btn.closest('tr');
+        if(confirm('Are you sure you want to activate this account?')) {
+          // Change status to Active
+          const account = JSON.parse(tr.dataset.account);
+          account.status = 'Active';
+          tr.dataset.account = JSON.stringify(account);
+          tr.cells[4].innerHTML = createStatusBadge(account.status);
+          btn.classList.remove('btn-outline-success', 'activate-account-btn');
+          btn.classList.add('btn-outline-danger', 'delete-account-btn');
+          btn.title = "Deactivate Account";
+          btn.innerHTML = '<i class="bi bi-x-circle"></i> Deactivate';
+        }
+      }
+    });
+
+    // Save Edit Account
+    editAccountForm.addEventListener('submit', e => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (!editAccountForm.checkValidity()) {
+        editAccountForm.classList.add('was-validated');
+        return;
+      }
+
+      const rowIndex = Number(editAccountRowIndex.value);
+      const tr = accountsTableBody.children[rowIndex];
+
+      const updatedAccount = {
+        id: editAccountID.value.trim(),
+        name: editAccountName.value.trim(),
+        email: editAccountEmail.value.trim(),
+        role: editAccountRole.value,
+        status: editAccountStatus.value
+      };
+
+      tr.dataset.account = JSON.stringify(updatedAccount);
+      tr.innerHTML = `
+        <td>${updatedAccount.id}</td>
+        <td>${updatedAccount.name}</td>
+        <td>${updatedAccount.email}</td>
+        <td>${updatedAccount.role}</td>
+        <td>${createStatusBadge(updatedAccount.status)}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-primary edit-account-btn" type="button" title="Edit Account">
+            <i class="bi bi-pencil-square"></i> Edit
+          </button>
+          <button class="btn btn-sm btn-outline-${updatedAccount.status === 'Active' ? 'danger delete-account-btn' : 'success activate-account-btn'}" type="button" title="${updatedAccount.status === 'Active' ? 'Deactivate Account' : 'Activate Account'}">
+            <i class="bi bi-${updatedAccount.status === 'Active' ? 'x-circle' : 'check-circle'}"></i> ${updatedAccount.status === 'Active' ? 'Deactivate' : 'Activate'}
+          </button>
+        </td>
+      `;
+      editAccountForm.classList.remove('was-validated');
+      editAccountModal.hide();
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,103 @@
+/* body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+} */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+}
+h2{
+  font-family: 'Times New Roman', Times, serif;
+}
+  /* Phần hero có hình nền */
+  .hero-section {
+    background-image: url('../img/contact1.jpg'); 
+    height: 65vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Lớp phủ tối */
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  /* Nội dung text */
+  .content {
+    text-align: center;
+    color: #fff;
+    
+  }
+  .content h2 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+  }
+  .content a {
+    color: #f87171;
+    text-decoration: none;
+    font-weight:bold;
+  }
+/* ------------------------------------- */
+
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  
+  .title-line::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #d9534f;
+    margin: 8px auto 0;
+  }
+  h2.text-center {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 3.5rem;
+    font-weight: 700;
+    font-size: 1.875rem; /* text-3xl */
+    color: #0c1a3e;
+  }
+  @keyframes slide-left-right {
+    0%, 100% {
+      transform: translateX(-50%) scaleX(1);
+    }
+    50% {
+      transform: translateX(-50%) scaleX(1.5);
+    }
+  }
+  
+  .animate-pulse-motion {
+    animation: slide-left-right 2s ease-in-out infinite;
+    transform-origin: center;
+  }
+  #map {
+    height: 400px; /* Chiều cao của bản đồ */
+    width: 100%; /* Chiều rộng của bản đồ */
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .footer {
+            background-color: #0a1a2e;
+            color: #fff;
+            padding: 20px 0;
+            width:auto;
+            margin-left: -50px;
+            margin-top: 20px;
+        }
+        
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+           
+        }
+        
+        .footer-column {
+            width: 25%;
+            padding: 0 15px;
+            box-sizing: border-box;
+            
+        }
+        
+        .footer-logo {
+            height:60px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-desc {
+            color: #a9b3c1;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: #d63031;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #d63031;
+        }
+        
+        .useful-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .useful-links li {
+            margin-bottom: 15px;
+        }
+        
+        .useful-links a {
+            color: #a9b3c1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .useful-links a:hover {
+            color: #fff;
+        }
+        
+        .useful-links a i {
+            color: #d63031;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            color: #a9b3c1;
+            font-size: 14px;
+        }
+        
+        .contact-list i {
+            color: #d63031;
+            margin-right: 10px;
+            margin-top: 3px;
+            width: 16px;
+        }
+        
+        .newsletter-form {
+            margin-top: 20px;
+        }
+        
+        .newsletter-input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255,255,255,0.05);
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        .newsletter-input::placeholder {
+            color: #6c7a8c;
+        }
+        
+        .subscribe-btn {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #d63031;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        
+        .subscribe-btn:hover {
+            background-color: #c02425;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-column {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-column {
+                width: 100%;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-column">
+                <img src="../img/loho1.jpg" class="footer-logo">
+                <p class="footer-desc" style="text-align: justify;">
+                    Hibtel Hotel là một khách sạn hiện đại, cung cấp các dịch vụ lưu trú chất lượng cao với thiết kế sang trọng và tiện nghi. Nằm ở vị trí thuận lợi trong thành phố, Hibtel Hotel thường được khách du lịch và doanh nhân ưa chuộng vì sự thuận tiện trong việc di chuyển. Hibtel Hotel cam kết mang đến trải nghiệm thoải mái và tận tình cho mọi khách hàng.
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Usefull Links</h3>
+                <ul class="useful-links">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chevron-right"></i>
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chevron-right"></i>
+                            Boutique Apartment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chevron-right"></i>
+                            Jungle Safari Resort
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chevron-right"></i>
+                            Mountain Chalet
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chevron-right"></i>
+                            Luxury Resort
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        147 Mai dịch, Cầu giấy, Hà Nội
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        info@hit.com.vn
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        0242 242 0777
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Newsletter</h3>
+                <p class="footer-desc">Every Single Updates and Notification</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter email">
+                    <button type="submit" class="subscribe-btn">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

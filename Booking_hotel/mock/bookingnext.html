@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIBTEL BOOKING ENGINE</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            padding: 20px 0;
+        }
+        .table-header {
+            background-color: #8b7b61;
+            color: white;
+        }
+        .room-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+        .original-price {
+            color: red;
+            text-decoration: line-through;
+        }
+        .discounted-price {
+            color: green;
+            font-weight: bold;
+        }
+        .reserve-btn {
+            background-color: #8b7b61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+        }
+        .room-not-selected {
+            color: red;
+        }
+        .option-item {
+            margin-bottom: 5px;
+        }
+        .check-icon {
+            color: #8b7b61;
+        }
+        .person-icon {
+            opacity: 0.7;
+        }
+        .room-category {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        #returnhome {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #returnhome a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="fw-bold">HIBTEL BOOKING ENGINE</h2>
+                    <p class="mb-0">Phone: <a href="tel:+84(0)2422420777">+84(0)242 2420 777</a> | Email: <a href="mailto:info@hibtel.com">info@hibtel.com</a></p>
+                    <p>147 Mai Dich, Cau Giay, Ha Noi, Vietnam</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Table -->
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-header">
+                            <th style="width: 30%">Loại phòng</th>
+                            <th style="width: 30%">Lựa chọn</th>
+                            <th style="width: 15%">Giá hôm nay</th>
+                            <th style="width: 13%">Chọn phòng</th>
+                            <th style="width: 12%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="room-category">
+                            <td colspan="5">PHÒNG TIÊU CHUẨN</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                <img src="../img/resort-11.jpg" alt="Junior Suite Balcony" class="room-image mb-3">
+                                <h5 class="fw-bold">Phòng cơ bản có ban công</h5>
+                                <p class="mb-1"><strong>Số người tối đa:</strong> 
+                                    <i class="fas fa-user person-icon"></i>
+                                    <i class="fas fa-user person-icon"></i>
+                                    <i class="fas fa-user person-icon"></i>
+                                </p>
+                                <p class="mb-1"><strong>Giường:</strong> 1 giường đôi & 1 giường đơn</p>
+                                <p class="mb-1"><strong>View:</strong> Thành phố</p>
+                                <p class="mb-1"><strong>Tùy chọn giường phụ:</strong></p>
+                                <p class="mb-1"><strong>Kích thước phòng:</strong> 35 m<sup>2</sup></p>
+                            </td>
+                            <td>
+                                <h5>Khai trương</h5>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Bữa sáng
+                                </p>
+                            </td>
+                            <td>
+                                <div class="original-price">999,999.00 <span class="small">USD</span></div>
+                                <div class="discounted-price">799,999.20 <span class="small">USD</span></div>
+                            </td>
+                            <td>
+                                <select class="form-select" id="room-select-1">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </td>
+                            <td rowspan="2">
+                                <button class="reserve-btn" id="reserve-btn-1">ĐẶT TRƯỚC</button>
+                                <p class="room-not-selected text-center mt-2">Phòng chưa được chọn</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>Khuyến mãi với nhà hàng</h5>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Bữa sáng
+                                </p>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Bữa trưa
+                                </p>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Bữa tối
+                                </p>
+                            </td>
+                            <td>
+                                <div class="original-price">999,999.00 <span class="small">USD</span></div>
+                                <div class="discounted-price">899,999.10 <span class="small">USD</span></div>
+                            </td>
+                            <td>
+                                <select class="form-select" id="room-select-2">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="room-category">
+                            <td colspan="5">PHÒNG DELUXE</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                <img src="../img/resort-12.jpg" alt="Deluxe Suite" class="room-image mb-3">
+                                <h5 class="fw-bold">Phòng Deluxe hướng biển</h5>
+                                <p class="mb-1"><strong>Số người tối đa:</strong> 
+                                    <i class="fas fa-user person-icon"></i>
+                                    <i class="fas fa-user person-icon"></i>
+                                    <i class="fas fa-user person-icon"></i>
+                                    <i class="fas fa-user person-icon"></i>
+                                </p>
+                                <p class="mb-1"><strong>Giường:</strong> 1 giường king & 1 giường đôi</p>
+                                <p class="mb-1"><strong>View:</strong> Biển</p>
+                                <p class="mb-1"><strong>Tùy chọn giường phụ:</strong> Có</p>
+                                <p class="mb-1"><strong>Kích thước phòng:</strong> 45 m<sup>2</sup></p>
+                            </td>
+                            <td>
+                                <h5>Gói tiêu chuẩn</h5>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Bữa sáng
+                                </p>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Đón sân bay
+                                </p>
+                            </td>
+                            <td>
+                                <div class="original-price">1,299,999.00 <span class="small">USD</span></div>
+                                <div class="discounted-price">1,099,999.20 <span class="small">USD</span></div>
+                            </td>
+                            <td>
+                                <select class="form-select" id="room-select-3">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </td>
+                            <td rowspan="2">
+                                <button class="reserve-btn" id="reserve-btn-2">ĐẶT TRƯỚC</button>
+                                <p class="room-not-selected text-center mt-2">Phòng chưa được chọn</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>Gói gia đình</h5>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Bữa sáng
+                                </p>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Bữa trưa
+                                </p>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Bữa tối
+                                </p>
+                                <p class="option-item">
+                                    <i class="fas fa-check check-icon"></i> Spa 60 phút
+                                </p>
+                            </td>
+                            <td>
+                                <div class="original-price">1,399,999.00 <span class="small">USD</span></div>
+                                <div class="discounted-price">1,199,999.10 <span class="small">USD</span></div>
+                            </td>
+                            <td>
+                                <select class="form-select" id="room-select-4">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="returnhome"><a href="home.html">Quay lại trang chủ</a></div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Handle room selection for all select elements
+            $('#room-select-1, #room-select-2, #room-select-3, #room-select-4').change(function() {
+                // Determine which section this select belongs to
+                let section = $(this).attr('id').includes('1') || $(this).attr('id').includes('2') ? 1 : 2;
+                let reserveBtn = section === 1 ? '#reserve-btn-1' : '#reserve-btn-2';
+                let roomsSelected = 0;
+                
+                // Count total rooms selected for this section
+                if (section === 1) {
+                    $('#room-select-1, #room-select-2').each(function() {
+                        roomsSelected += parseInt($(this).val());
+                    });
+                } else {
+                    $('#room-select-3, #room-select-4').each(function() {
+                        roomsSelected += parseInt($(this).val());
+                    });
+                }
+                
+                // Update UI based on selection
+                if (roomsSelected > 0) {
+                    $(reserveBtn).siblings('.room-not-selected').hide();
+                    $(reserveBtn).addClass('btn-success');
+                } else {
+                    $(reserveBtn).siblings('.room-not-selected').show();
+                    $(reserveBtn).removeClass('btn-success');
+                }
+            });
+            
+            // Handle reserve button click
+            $('.reserve-btn').click(function() {
+                let section = $(this).attr('id').includes('1') ? 1 : 2;
+                let roomsSelected = 0;
+                
+                // Count total rooms selected for this section
+                if (section === 1) {
+                    $('#room-select-1, #room-select-2').each(function() {
+                        roomsSelected += parseInt($(this).val());
+                    });
+                } else {
+                    $('#room-select-3, #room-select-4').each(function() {
+                        roomsSelected += parseInt($(this).val());
+                    });
+                }
+                
+                if (roomsSelected <= 0) {
+                    alert('Vui lòng chọn ít nhất một phòng trước khi đặt.');
+                } else {
+                    window.location.href = "paying.html"; // Chuyển đến trang okbooking.html
+                }
+            });
+        });
+    </script>
+</body>
+</html>

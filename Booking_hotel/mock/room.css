@@ -1,0 +1,361 @@
+/* Xóa khoảng cách mặc định của trình duyệt */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.popular-dishes{
+  background-image: url('Giấy\ dán\ tường.png');
+}
+
+/* Lấy font chữ */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* Ảnh nền banner */
+.banner {
+  position: relative;
+  background-image: url('../img/AnhNen-6.png'); /* Link ảnh bìa */
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+  color: white;
+}
+
+/* Khối chữ nổi */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+/* Lớp phủ tối màu */
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Làm tối ảnh */
+  z-index: 1;
+}
+
+/* Chữ tiêu đề */
+.overlay-text h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Breadcrumb HOME > RESTAURANT */
+.breadcrumb a {
+  margin-left: 70px;
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+
+.breadcrumb span {
+  color: white;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* danh dau */
+.main-img {
+    height: 450px;
+    object-fit: cover;
+}
+  
+.thumb {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+  
+.thumb:hover {
+    transform: scale(1.05);
+    border: 2px solid #dc3545;
+}
+  
+.thumb-container {
+    scroll-snap-type: x mandatory;
+    padding-bottom: 5px;
+    gap: 10px;
+}
+
+/* đánh dấu */
+
+  /* Lấy font chữ */
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-weight: 800;
+  }
+  
+  .text-secondary {
+    color: #6c757d !important;
+  }
+  
+  .text-warning i {
+    margin-right: 2px;
+  }
+  
+  /* ===== Card Icon ===== */
+  .card-icon {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card-icon:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-icon i {
+    font-size: 2rem;
+    color: #dc3545;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-icon h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  /* Flip icon on hover */
+  .card-icon:hover i {
+    transform: scaleX(-1);
+  }
+  
+  /* ===== Booking Sidebar ===== */
+  .booking-box {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .booking-header {
+    background: #0d1b2a;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  /* ===== Room Card ===== */
+  .room-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .room-card img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+  
+  .room-card h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .room-card p {
+    margin: 2px 0 0;
+    font-size: 0.9rem;
+  }
+  
+  .room-card span {
+    color: red;
+    font-weight: bold;
+  }
+  
+
+  /* đánh dấu lần 2 */
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+}
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+}
+.service-column {
+    flex: 1;
+}
+.service-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.custom-checkbox {
+    font-size: 1.2rem;
+    color: #dc3545;
+    margin-right: 8px;
+}
+.service-label {
+    font-size: 1rem;
+    color: #333;
+    margin-left: 5px;
+}
+
+/* đánh dấu */
+.room-banner {
+  width: 100%;
+  /* height: 400px; */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.room-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(1);
+  border-radius: 8px;
+  height: 100%;
+  width: 90%;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+  z-index: 2;
+}
+
+.info-hover {
+  transform: translate(-50%, -50%) scaleX(0);
+  opacity: 0;
+  
+}
+
+.info-default {
+  z-index: 3;
+  height: 30%;
+  top: 70%;
+  width: 90%;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* đánh dấu  */
+
+.btn-container {
+  margin-top: 90px; /* hoặc 50px tùy muốn đẩy bao nhiêu */
+}
+
+.card-custom {
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+}
+
+.price-text {
+  color: #6c757d;
+  font-size: 0.8rem;
+  width: 120%;
+}
+
+.star-rating {
+  color: #ffc107;
+  width: 120%;
+}
+
+.room-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #212529;
+}
+
+.description {
+  color: #6c757d;
+  margin-top: 15px;
+}
+
+.btn-custom-red {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+}
+
+.btn-custom-dark {
+  background-color: #0d1117;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+}
+
+.btn-custom-red:hover,
+.btn-custom-dark:hover {
+  opacity: 0.9;
+}
+
+/* đánh dấu */
+.suite-card {
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.star-rating {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.suite-title {
+  font-weight: bold;
+  color: #212529;
+}

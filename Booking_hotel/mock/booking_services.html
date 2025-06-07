@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đặt Phòng Tiện Ích</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url('../img/hinh-nen-gym-dep_032120483.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 30px;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Đặt Phòng Tiện Ích</h2>
+    <form onsubmit="return showAlert()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name">Họ và Tên</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Gmail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="voucher">Voucher (nếu có)</label>
+                    <input type="text" class="form-control" id="voucher" placeholder="Nhập mã voucher">
+                </div>
+                <div class="form-group">
+                    <label for="facility">Loại Tiện Ích</label>
+                    <select class="form-control" id="facility" required>
+                        <option value="" disabled selected>Chọn loại tiện ích</option>
+                        <option value="gym">Gym</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="swimming">Bơi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="registrationType">Loại Đăng Ký</label>
+                    <select class="form-control" id="registrationType" required>
+                        <option value="" disabled selected>Chọn loại đăng ký</option>
+                        <option value="monthly">Theo Tháng</option>
+                        <option value="daily">Theo Ngày</option>
+                        <option value="booking">Theo Lịch Đặt Phòng</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button type="button" class="btn btn-primary"><a href="Services.html" style="color:white; text-decoration: none;">Quay lại</a></button>
+            <button type="submit" class="btn btn-primary">Đặt Phòng</button>
+        </div>
+    </form>
+</div>
+<script>
+    function generateOrderId() {
+        const date = new Date();
+        const randomNum = Math.floor(Math.random() * 10000);
+        return `HD${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}-${randomNum}`;
+    }
+
+    function showAlert() {
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+        const facility = document.getElementById("facility").value;
+        const registrationType = document.getElementById("registrationType").value;
+        const orderId = generateOrderId();
+
+        const message = `Phòng của bạn đã được đặt!\n\n` +
+                        `Mã Hóa Đơn: ${orderId}\n` +
+                        `Họ và Tên: ${name}\n` +
+                        `Số Điện Thoại: ${phone}\n` +
+                        `Gmail: ${email}\n` +
+                        `Loại Tiện Ích: ${facility}\n` +
+                        `Loại Đăng Ký: ${registrationType}\n` +
+                        `Hãy nhớ đọc mã hóa đơn của bạn để thanh toán tại quầy khách sạn\n` + ` Xin cảm ơn quý khách`;
+
+        alert(message);
+        return false; // Ngăn chặn việc gửi form
+    }
+</script>
+
+</body>
+</html>

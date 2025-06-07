@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quản trị viên Hibel - Đơn hàng</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      background: #f8f9fa;
+    }
+    #sidebar {
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #343a40;
+      padding-top: 56px;
+      overflow-y: auto;
+    }
+    #sidebar .nav-link {
+      color: #adb5bd;
+      font-weight: 600;
+    }
+    #sidebar .nav-link.active, #sidebar .nav-link:hover {
+      background-color: #495057;
+      color: #fff;
+      border-radius: 0.375rem;
+    }
+    main {
+      margin-left: 240px;
+      padding: 2rem;
+      width: 100%;
+    }
+    @media (max-width: 767.98px) {
+      #sidebar {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        z-index: 1030;
+        padding-top: 0;
+      }
+      main {
+        margin-left: 0;
+        padding-top: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark fixed-top d-md-none">
+  <div class="container-fluid">
+    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" aria-label="Chuyển đổi sidebar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand ms-2" href="#">Quản trị viên Hibel</a>
+  </div>
+</nav>
+
+ <!-- Sidebar -->
+    <div id="sidebar" class="d-none d-md-block">
+    <div class="p-3 text-white fs-5 fw-bold">Hibel Admin</div>
+    <nav class="nav flex-column px-2">
+      <a class="nav-link " href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
+      <a class="nav-link" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
+      <a class="nav-link active" href="order.html"><i class="bi bi-cart-fill me-2"></i>Phòng đặt</a>
+      <a class="nav-link" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
+      <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
+      <a class="nav-link" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ </a>
+      <a class="nav-link" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
+      
+    </nav>
+  </div>
+
+  <!-- Offcanvas Sidebar for small screens -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header bg-dark text-white">
+      <h5 class="offcanvas-title" id="offcanvasSidebarLabel">HIbel Admin</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <nav class="nav flex-column">
+        <a class="nav-link  px-3 py-2" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Trang chủ</a>
+        <a class="nav-link px-3 py-2" href="profit_report.html"><i class="bi bi-bar-chart-line-fill me-2"></i> Báo cáo lợi nhuận </a>
+        <a class="nav-link active px-3 py-2" href="order.html"><i class="bi bi-cart-fill me-2"></i> Phòng đặt</a>
+        <a class="nav-link px-3 py-2" href="room.html"><i class="bi bi-door-closed-fill me-2"></i> Quản lý phòng</a>
+        <a class="nav-link px-3 py-2" href="contact.html"><i class="bi bi-envelope-fill me-2"></i> Liên hệ</a>
+        <a class="nav-link px-3 py-2" href="profile.html"><i class="bi bi-person-circle me-2"></i> Hồ sơ</a>
+        <a class="nav-link px-3 py-2" href="acccount.html"><i class="bi bi-people-fill me-2"></i> Tài khoản </a>
+        
+      </nav>
+    </div>
+  </div>
+<main>
+  <h1 class="mb-4">Phòng đặt </h1>
+  
+  <!-- Dropdown để lọc trạng thái -->
+  <div class="mb-3">
+    <label for="statusFilter" class="form-label">Trạng thái</label>
+    <select id="statusFilter" class="form-select" onchange="filterOrders()" style="width: 150px;">
+      <option value="all">Tất cả</option>
+      <option value="waiting">Đang chờ</option>
+      <option value="confirmed">Đã xác nhận</option>
+      <option value="canceled">Đã hủy</option>
+    </select>
+  </div>
+  
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle" id="ordersTable">
+      <thead class="table-secondary">
+        <tr>
+          <th>#Mã đặt phòng</th>
+          <th>Tên khách</th>
+          <th>Phòng</th>
+          <th>Nhận phòng</th>
+          <th>Trả phòng</th>
+          <th>Trạng thái</th>
+          <th>Tổng (VND)</th>
+          <th>Trạng thái phòng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<style>
+  .badge {
+    min-width: 80px; /* Thiết lập chiều rộng tối thiểu cho badge */
+    text-align: center; /* Căn giữa nội dung trong badge */
+    display: inline-block; /* Để áp dụng chiều rộng */
+  }
+</style>
+
+<script>
+  const customers = [
+    'Nguyễn Văn An',
+    'Trần Thị Mai',
+    'Lê Quang Huy',
+    'Phạm Thị Lan',
+    'Hoàng Văn Tú',
+    'Nguyễn Thị Như',
+    'Đặng Minh Tuấn',
+    'Vũ Thị Bích',
+    'Lê Văn Phúc',
+    'Trần Thị Kim'
+  ];
+  
+  const rooms = [
+    'Suite Deluxe',
+    'Phòng tiêu chuẩn',
+    'Phòng gia đình',
+    'Phòng VIP',
+    'Phòng đơn'
+  ];
+  
+  const orderStatuses = [
+    {name: 'Đang chờ', class: 'bg-warning text-dark'},
+    {name: 'Đã xác nhận', class: 'bg-success'},
+    {name: 'Đã hủy', class: 'bg-danger'}
+  ];
+
+  const roomStatuses = [
+    {name: 'Đã nhận phòng', condition: 'Đã xác nhận'},
+    {name: 'Đã trả phòng', condition: 'Đã xác nhận'},
+    {name: 'Còn trống', condition: 'Đã hủy'},
+    {name: 'Đang chờ', condition: 'Đang chờ'}
+  ];
+
+  const tbody = document.querySelector('#ordersTable tbody');
+
+  // Tạo 10 đơn hàng ngẫu nhiên
+  for (let i = 1; i <= 10; i++) {
+    const customer = customers[Math.floor(Math.random() * customers.length)];
+    const room = rooms[Math.floor(Math.random() * rooms.length)];
+    const checkInDate = new Date(Date.now() + Math.floor(Math.random() * 10000000000)).toLocaleDateString();
+    const checkOutDate = new Date(Date.now() + Math.floor(Math.random() * 10000000000) + 86400000).toLocaleDateString();
+    const orderStatus = orderStatuses[Math.floor(Math.random() * orderStatuses.length)];
+    
+    let roomStatus;
+    if (orderStatus.name === 'Đã hủy') {
+      roomStatus = 'Còn trống';
+    } else if (orderStatus.name === 'Đang chờ') {
+      roomStatus = 'Đang chờ';
+    } else {
+      roomStatus = Math.random() < 0.5 ? 'Đã nhận phòng' : 'Đã trả phòng';
+    }
+
+  const total = Math.floor(Math.random() * 4000) * 1000 + 1000000; // Số ngẫu nhiên từ 1 triệu đến 5 triệu có đuôi 000
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>ORD00${i}</td>
+      <td>${customer}</td>
+      <td>${room}</td>
+      <td>${checkInDate}</td>
+      <td>${checkOutDate}</td>
+      <td><span class="badge ${orderStatus.class}">${orderStatus.name}</span></td>
+      <td>${total}</td>
+      <td>${roomStatus}</td>
+    `;
+    tbody.appendChild(row);
+  }
+
+  // Hàm lọc đơn hàng theo trạng thái
+  function filterOrders() {
+    const filterValue = document.getElementById('statusFilter').value;
+    const rows = Array.from(tbody.rows);
+    
+    rows.forEach(row => {
+      const orderStatus = row.cells[5].textContent.trim();
+      if (filterValue === 'all' || (filterValue === 'waiting' && orderStatus === 'Đang chờ') || 
+          (filterValue === 'confirmed' && orderStatus === 'Đã xác nhận') || 
+          (filterValue === 'canceled' && orderStatus === 'Đã hủy')) {
+        row.style.display = ''; // Hiển thị hàng
+      } else {
+        row.style.display = 'none'; // Ẩn hàng
+      }
+    });
+  }
+</script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../jquery-3.7.1.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/quaylai.js"></script>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <!-- AOS Animation Library -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Custom CSS -->
+</head>
+<body>
+
+   <!-- Header -->
+   <div id="header"></div>
+
+   <!-- Hero Section -->
+   <section class="hero-section" id="heroSection">
+       <div class="hero-bg" style="background-image: url('../img/resort-1.jpg');"></div>
+       <div class="hero-overlay"></div>
+       <div class="container">
+           <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+               <h2 class="mb-2">CHÀO MỪNG ĐẾN VỚI HIBTEL</h2>
+               <h2 class="display-5 fw-bold">NƠI KHOẢNH KHẮC TRỞ THÀNH KỶ NIỆM</h2>
+               <h2 class="display-5 fw-bold mb-3">SANG TRỌNG HÒA QUYỆN VẺ ĐẸP</h2>
+               <h3 class="mb-4">_________ KHÁCH SẠN & KHU NGHỈ DƯỠNG _________</h3>
+               <button id="nextButton" class="btn btn-outline-light rounded-circle p-3">
+                   <i class="fas fa-chevron-right"></i>
+               </button>
+           </div>
+       </div>
+   </section>
+
+   <!-- Availability Form -->
+   <section class="container-aform">
+       <div class="row">
+           <div class="col-12">
+               <div class="availability-form" data-aos="fade-up" data-aos-duration="800">
+                   <div class="row">
+                       <div class="col-md-3 mb-3 mb-md-0">
+                           <div class="text-center input-container">
+                               <div class="form-icon">
+                                   <i class="fas fa-calendar-alt"></i>
+                               </div>
+                               <label for="arrival-date" class="form-label fw-bold">Ngày đến</label>
+                               <input type="date" id="arrival-date" class="form-control">
+                           </div>
+                       </div>
+                       <div class="col-md-3 mb-3 mb-md-0">
+                           <div class="text-center input-container">
+                               <div class="form-icon">
+                                   <i class="fas fa-calendar-times"></i>
+                               </div>
+                               <label for="arrival-date-2" class="form-label fw-bold">Ngày đi</label>
+                               <input type="date" id="arrival-date-2" class="form-control">
+                           </div>
+                       </div>
+                       <div class="col-md-2 mb-3 mb-md-0">
+                           <div class="text-center input-container">
+                               <div class="form-icon">
+                                   <i class="fas fa-user"></i>
+                               </div>
+                               <label for="adults" class="form-label fw-bold">Người lớn</label>
+                               <input type="number" id="adults" class="form-control" min="1" value="1">
+                           </div>
+                       </div>
+                       <div class="col-md-2 mb-3 mb-md-0">
+                           <div class="text-center input-container">
+                               <div class="form-icon">
+                                   <i class="fas fa-child"></i>
+                               </div>
+                               <label for="children" class="form-label fw-bold">Trẻ em</label>
+                               <input type="number" id="children" class="form-control" min="0" value="0">
+                           </div>
+                       </div>
+                       <div class="col-md-2  align-items-end justify-content-center">
+                           <button class="btn btn-danger w-100 py-2 fw-bold" style="margin-top: 70px;"><a href="bookingNow.html" style="color:white;text-decoration: none;">KIỂM TRA</a></button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- About Section -->
+   <section class="py-5 my-5">
+       <div class="container-about">
+           <div class="row align-items-center">
+               <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                   <div class="rounded overflow-hidden shadow">
+                       <img src="../img/resort-2.jpg" alt="About Us" class="img-fluid w-100">
+                   </div>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                   <h2 class="mb-4 fw-bold">Hibtel Hotel </h2>
+                   <p class="text-muted mb-4" style="text-align: justify !important;">Hibtel Hotel là một khách sạn hiện đại, cung cấp các dịch vụ lưu trú chất lượng cao với thiết kế sang trọng và tiện nghi. Nằm ở vị trí thuận lợi trong thành phố, Hibtel Hotel thường được khách du lịch và doanh nhân ưa chuộng vì sự thuận tiện trong việc di chuyển. Khách sạn cung cấp nhiều loại phòng, nhà hàng phục vụ ẩm thực đa dạng, cùng với các dịch vụ bổ sung như spa, phòng tập gym và hội nghị. Hibtel Hotel cam kết mang đến trải nghiệm thoải mái và tận tình cho mọi khách hàng.</p>
+                   
+                   <div class="row mb-4">
+                       <div class="col-md-6 mb-3 mb-md-0">
+                           <div class="card h-100 border-0 shadow-sm guarantee-card">
+                               <div class="card-body text-center">
+                                   <i class="fas fa-dollar-sign text-danger fs-1 mb-3 service-icon"></i>
+                                   <h5 class="card-title fw-bold">Cam kết giá tốt nhất</h5>
+                                   <p class="card-text text-muted">Tạo điều kiện linh hoạt để cung cấp các lợi ích tốt nhất mà không gặp trở ngại</p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="card h-100 border-0 shadow-sm guarantee-card">
+                               <div class="card-body text-center">
+                                   <i class="fas fa-shopping-bag text-danger fs-1 mb-3 service-icon"></i>
+                                   <h5 class="card-title fw-bold">Địa điểm đáng ghé thăm nhất</h5>
+                                   <p class="card-text text-muted">Tạo điều kiện linh hoạt để cung cấp các lợi ích tốt nhất mà không gặp trở ngại</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   
+                   <a href="about.html" class="btn btn-danger px-4 py-2 fw-bold">XEM THÊM</a>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- Rooms Section -->
+   <section class="py-5" style="background-image: url('../img/dantuong.jpg'); background-size: cover;">
+       <div class="container-room">
+           <h2 class="text-center mb-5 fw-bold" data-aos="fade-up" data-aos-duration="800">Phòng & Suites Khách Sạn Tốt Nhất</h2>
+           
+           <div class="row" id="roomsContainer">
+               <!-- Room cards will be added here by JavaScript -->
+           </div>
+           
+           <div class="text-center mt-4">
+               <a href="room.html" class="text-danger fw-bold text-decoration-none fs-5">Xem thêm</a>
+           </div>
+       </div>
+       
+       <!-- Room Info Display -->
+       <div class="info-display" id="infoDisplay" style="display: none; position: absolute; background: white; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); padding: 20px; z-index: 100;"></div>
+   </section>
+
+   <!-- Services Section -->
+   <section class="py-5 my-5">
+       <div class="container">
+           <div class="row align-items-center">
+               <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                   <h4 class="text-danger fw-bold">SERVICES & AMENITIES</h4>
+                   <h2 class="mb-4 fs-1">Dịch vụ và tiện nghi của khách sạn chúng tôi</h2>
+                   <p class="text-muted fs-6">
+                    Hibtel cung cấp chỗ ở sang trọng với các tiện nghi hiện đại, mang đến cho bạn một kỳ nghỉ tuyệt vời và thư giãn. Từ bữa sáng buffet phong phú, đa dạng món ăn đến hồ bơi ngoài trời tuyệt đẹp, mọi thứ đều được thiết kế để bạn có thể tận hưởng những phút giây thư giãn nhất. Đội ngũ nhân viên chuyên nghiệp của chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7, đảm bảo rằng mọi yêu cầu của bạn đều được đáp ứng kịp thời và chu đáo. Ngoài ra, khách sạn còn trang bị phòng gym hiện đại và khu vực hội nghị linh hoạt để phục vụ cho mọi nhu cầu của bạn, từ việc tổ chức sự kiện đến các cuộc họp quan trọng. Hãy đến và trải nghiệm sự thoải mái, sang trọng và dịch vụ tận tình tại Hibtel – nơi mà mỗi khoảnh khắc của bạn đều trở nên quý giá!
+                    </p>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                   <div class="rounded overflow-hidden shadow">
+                       <img src="../img/resort-9.jpg" alt="Services" class="img-fluid w-100">
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- Restaurant Section -->
+   <section class="py-5 bg-light">
+       <div class="container">
+           <div class="row" id="restaurantContainer">
+               <!-- Restaurant cards will be added here by JavaScript -->
+           </div>
+       </div>
+   </section>
+
+   <!-- Video Section -->
+<section class="video-section" style="background-image: url('../img/nen-nhac.jpg');">
+   <div class="overlay"></div>
+   <div class="container-video">
+       <div class="row justify-content-center">
+           <div class="col-lg-8" data-aos="zoom-in" data-aos-duration="1000">
+               <div class="video-container-1">
+                   <button class="play-button" id="playButton">
+                       <i class="fas fa-play text-danger fs-3"></i>
+                   </button>
+               </div>
+               <h2 class="mb-4 fw-bold fs-1">See The Experience Before You Feel it</h2>
+               <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-danger px-4 py-2 fw-bold"><a href="Contact.html" style="color:white;text-decoration: none;">CONTACT US</a></button>
+                   <a href="bookingNow.html" class="btn btn-success px-4 py-2 fw-bold text-white text-decoration-none">BOOK NOW</a>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+   <!-- Video Modal -->
+   <div class="video-modal" id="videoModal">
+       <div class="modal-content">
+           <button class="close-button" id="closeButton">&times;</button>
+           <video controls class="w-100 rounded">
+               <source src="../img/dulich.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+           </video>
+       </div>
+   </div>
+
+   <!-- Gym Section -->
+  <!-- Gym Section -->
+    <div class="container-gym py-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Dịch Vụ Hibtel</h2>
+        </div>
+        
+        <!-- Gym Slider Container -->
+        <div class="gym-slider-container">
+            <div class="gym-slider" id="gym-slider">
+                <!-- Slide 1 -->
+                <div class="gym-slide">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                                <div class="gym-content active">
+                                    <div class="gym-title">
+                                        <span class="line"></span>
+                                        <h5 class="text-danger">GYM CENTER</h5>
+                                        <span class="line"></span>
+                                    </div>
+                                    <h3 class="mb-3" style="text-align: center;">Sức Khỏe & Thể Hình</h3>
+                                    <p class="text-muted mb-3">Sức khỏe tốt và thể hình cân đối là nền tảng cho một cuộc sống năng động và hạnh phúc.</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Chế độ</span></div>
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Dinh dưỡng</span></div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Nghỉ ngơi</span></div>
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Tâm lý</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="gym-slide">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                                <div class="gym-content">
+                                    <div class="gym-title">
+                                        <span class="line"></span>
+                                        <h5 class="text-danger" >SPA CENTER</h5>
+                                        <span class="line"></span>
+                                    </div>
+                                    <h3 class="mb-3"style="text-align: center;">Thư Giãn & Trẻ Hóa</h3>
+                                    <p class="text-muted mb-3" >Spa mang lại không gian thư giãn, giúp tái tạo năng lượng và làm đẹp cho cả cơ thể lẫn tâm hồn</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Dịch vụ</span></div>
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Khongo gian</span></div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Chất lượng</span></div>
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Sarn phẩm </span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="gym-slide">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                                <div class="gym-content">
+                                    <div class="gym-title">
+                                        <span class="line"></span>
+                                        <h5 class="text-danger">SWIMMING POOL</h5>
+                                        <span class="line"></span>
+                                    </div>
+                                    <h3 class="mb-3" style="text-align: center;">Tươi mới & Sảng Khoái</h3>
+                                    <p class="text-muted mb-3">Không gian sang trọng, lý tưởng để thư giãn và tận hưởng những giây phút yên bình giữa thiên nhiên."</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Chất lượng</span></div>
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Thiết kế</span></div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>An toàn</span></div>
+                                            <div class="feature-item"><div class="feature-icon">✓</div><span>Tiện nghi</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gym-image-card">
+                                <img src="../img/phong2.png" alt="Room">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nút điều hướng -->
+        <div class="text-center mt-4">
+            <button class="btn btn-outline-danger rounded-circle nav-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="btn btn-danger rounded-circle nav-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+   <!-- Holiday Section -->
+<section class="py-5 bg-light">
+   <div class="container-holiday">
+       <div class="text-center mb-5">
+           <h4 class="text-danger fw-bold">Our offer</h4>
+           <h2 class="fw-bold fs-1">Special Holiday Of You</h2>
+       </div>
+       
+       <div class="row">
+           <div class="col-lg-5 mb-4 mb-lg-0">
+               <div class="holiday-slider">
+                   <div class="img-left">
+                       <img src="../img/resort-8.jpg" alt="Holiday 1">
+                       <img src="../img/resort-9.jpg" alt="Holiday 2">
+                       <img src="../img/resort-11.jpg" alt="Holiday 3">
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-7" style="height:500px">
+               <div class="bg-white p-4 rounded shadow h-100">
+                   <h3 class="mb-3 fw-bold">The Summer Vacation Sale - <span id="blinking-text">Giảm Giá 50%!</span></h3>
+                   <p class="fw-bold mb-3">Khám Phá Mùa Hè Đáng Nhớ Này!</p>
+                   <p class="text-muted mb-4">Chào mừng bạn đến với chương trình khuyến mãi đặc biệt của chúng tôi! Chúng tôi mang đến cho bạn cơ hội tuyệt vời để tận hưởng kỳ nghỉ hè với giá giảm 50% cho tất cả các sản phẩm và dịch vụ.</p>
+                   <p><a href="khuyenmai.html" class="text-primary text-decoration-underline fs-5">Chi tiết khuyến mãi</a></p>
+                   <a href="bookingNow.html" class="btn btn-danger px-4 py-2 mt-3 fw-bold">Book Now</a>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+   <!-- Testimonials Section -->
+   <section class="py-5 my-5" style="background-image: url('../img/dantuong.jpg'); background-size: cover;">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="800">
+                   <h4 class="text-danger fw-bold">Testimonials</h4>
+                   <h2 class="fw-bold fs-1">What Client Say</h2>
+               </div>
+               <div class="col-lg-8" data-aos="fade-left" data-aos-duration="800">
+                   <div class="comment-container">
+                       <!-- Testimonials will be added here by JavaScript -->
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- Blog Section -->
+   <section class="py-5">
+       <div class="container-blog">
+           <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="800">
+               <h4 class="text-danger fw-bold">BLOGS</h4>
+               <h2 class="fw-bold fs-1">TIN TỨC  & BÀI VIẾT  </h2>
+           </div>
+           
+           <div class="row" id="blogContainer">
+               <!-- Blog cards will be added here by JavaScript -->
+           </div>
+       </div>
+   </section>
+
+   <!-- Instagram Section -->
+   <section class="instagram-section">
+       <div class="instagram-slider">
+           <div class="instagram-item">
+               <img src="../img/resort-11.jpg" alt="Instagram 1">
+           </div>
+           <div class="instagram-item">
+               <img src="../img/resort-12.jpg" alt="Instagram 2">
+           </div>
+           <div class="instagram-item">
+               <img src="../img/resort-13.jpg" alt="Instagram 3">
+           </div>
+           <div class="instagram-item">
+               <img src="../img/resort-14.jpg" alt="Instagram 4">
+           </div>
+           <div class="instagram-item">
+               <img src="../img/resort-15.jpg" alt="Instagram 5">
+           </div>
+           <!-- Duplicate for infinite scroll effect -->
+           <div class="instagram-item">
+               <img src="../img/resort-11.jpg" alt="Instagram 1">
+           </div>
+           <div class="instagram-item">
+               <img src="../img/resort-12.jpg" alt="Instagram 2">
+           </div>
+           <div class="instagram-item">
+               <img src="../img/resort-13.jpg" alt="Instagram 3">
+           </div>
+           <div class="instagram-item">
+               <img src="../img/resort-14.jpg" alt="Instagram 4">
+           </div>
+           <div class="instagram-item">
+               <img src="../img/resort-15.jpg" alt="Instagram 5">
+           </div>
+       </div>
+   </section>
+
+   <div id="footer"></div>
+   <div id="quaylai"></div>
+
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <!-- Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- AOS Animation Library -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+
+</body>
+</html>
