@@ -383,7 +383,7 @@
     } else if (e.target.closest('.delete-room-btn')) {
       const btn = e.target.closest('.delete-room-btn');
       const tr = btn.closest('tr');
-      if (confirm('Are you sure you want to delete this room?')) {
+      if (confirm('Bạn chắc chắn muốn xóa phòng này ra khỏi danh sách?')) {
         tr.remove();
       }
     }
