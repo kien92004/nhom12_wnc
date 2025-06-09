@@ -256,26 +256,25 @@ let holidayInterval;
 // Thiết lập ban đầu
 function initHolidaySlider() {
     // Hiển thị hình ảnh đầu tiên
-    showHolidayImage(0);
+    showHolidayImage(currentHolidayIndex);
 
     // Bắt đầu slideshow
     startHolidaySlideshow();
-
-    // Thiết lập hiệu ứng nhấp nháy
-    setupBlinkingText();
 }
 
 // Hiệu ứng chuyển đổi hình ảnh
 function changeHolidayImage() {
-    const nextIndex = (currentHolidayIndex + 1) % totalHolidayImages;
-
-    // Hiển thị hình ảnh tiếp theo
-    showHolidayImage(nextIndex);
-    currentHolidayIndex = nextIndex;
+    currentHolidayIndex = (currentHolidayIndex + 1) % totalHolidayImages;
+    showHolidayImage(currentHolidayIndex);
 }
 
 // Hiển thị hình ảnh với hiệu ứng
 function showHolidayImage(index) {
+    holidayImages.stop(true, true).css({
+        'opacity': 0,
+        'transform': 'scale(1)'
+    });
+
     holidayImages.eq(index).css({
         'opacity': 0,
         'transform': 'scale(1.1)'
@@ -290,19 +289,8 @@ function startHolidaySlideshow() {
     holidayInterval = setInterval(changeHolidayImage, 3000);
 }
 
-// Hiệu ứng nhấp nháy cho text
-function setupBlinkingText() {
-    const blinkingText = $('#blinking-text');
-    const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
-    let colorIndex = 0;
-
-    setInterval(function() {
-        blinkingText.animate({
-            color: colors[colorIndex]
-        }, 300);
-        colorIndex = (colorIndex + 1) % colors.length;
-    }, 300);
-}
+// Gọi hàm khởi tạo khi tài liệu đã sẵn sàng
+$(document).ready(initHolidaySlider);
 
 // Thêm easing functions cho jQuery
 $.easing.easeInCubic = function(x, t, b, c, d) {
