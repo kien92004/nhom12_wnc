@@ -334,3 +334,4 @@ $('[data-fancybox]').fancybox({
     hash: false,
     infobar: false,
 });
+
