@@ -21,6 +21,23 @@
         $('#footer').load('footer.html');
         $('#quaylai').load('quaylai.html'); // Tải nội dung từ header.html
     });
+
+    function filterMenu(category) {
+        const cards = document.querySelectorAll('.row > div');
+        const tabs = document.querySelectorAll('.tab');
+
+        cards.forEach(card => {
+            card.style.display = card.classList.contains(category) ? 'flex' : 'none';
+        });
+
+        tabs.forEach(tab => tab.classList.remove('active'));
+        document.querySelector(`.tab[onclick*="${category}"]`).classList.add('active');
+    }
+
+    // Khởi tạo mặc định
+    window.onload = function() {
+        filterMenu('AllRoom');
+    }
 </script>
 
 <body>
@@ -37,11 +54,18 @@
         </div>
     </div>
 
+    <br>
+    <br>
+    <div class="tabs">
+          <button class="tab active" onclick="filterMenu('AllRoom')">Tất cả</button>
+          <button class="tab" onclick="filterMenu('VIPRoom')">Phòng hạng sang</button>
+          <button class="tab" onclick="filterMenu('BasicRoom')">Phòng tiêu chuẩn</button>
+    </div>
     <!-- Nội dung phòng -->
     <div class="container mt-5">
         <div class="row">
             <!-- Phòng 1 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom VIPRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="../img/phong1.png" class="img-fluid" style="height: 400px;" alt="Phòng 1">
                     <div class="room-info info-default text-center">
@@ -57,7 +81,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <h4 class="suite-title mt-2">Phòng Suite Sang Trọng</h4>
+                                <h4 class="suite-title mt-2">Phòng Suite</h4>
                             </div>
                         </div>
                     </div>
@@ -76,7 +100,7 @@
                                     </div>
                                 </div>
                                 <div class="room-title mt-3">
-                                    <h4>Phòng Suite Sang Trọng</h4>
+                                    <h4>Phòng Suite</h4>
                                 </div>
                                 <p class="description">
                                     Phòng được thiết kế hiện đại với đầy đủ tiện nghi, mang đến cho bạn trải nghiệm nghỉ
@@ -98,7 +122,7 @@
             </div>
 
             <!-- Phòng 2 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom VIPRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="../img/phong2.png" class="img-fluid" style="height: 400px;" alt="Phòng 2">
                     <div class="room-info info-default text-center">
@@ -155,7 +179,7 @@
             </div>
 
             <!-- Phòng 3 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom VIPRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="../img/phong3.png" class="img-fluid" style="height: 400px;" alt="Phòng 3">
                     <div class="room-info info-default text-center">
@@ -213,10 +237,10 @@
         </div>
     </div>
     <!-- đánh dấu -->
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
             <!-- Phòng 1 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom VIPRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="../img/phong2.png" class="img-fluid" style="height: 400px;" alt="Phòng 1">
                     <div class="room-info info-default text-center">
@@ -273,7 +297,7 @@
             </div>
 
             <!-- Phòng 2 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom VIPRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="../img/phong3.png" class="img-fluid" style="height: 400px;" alt="Phòng 2">
                     <div class="room-info info-default text-center">
@@ -330,7 +354,7 @@
             </div>
 
             <!-- Phòng 3 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom VIPRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="https://res.cloudinary.com/hoahien/image/upload/v1748451993/snswyyott2wtm8cgnzfm.jpg"
                         class="img-fluid" style="height: 400px;" alt="Phòng 3">
@@ -347,7 +371,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <h4 class="suite-title mt-2">Phòng Suite Tổng Thống </h4>
+                                <h4 class="suite-title mt-2">Phòng Tổng Thống </h4>
                             </div>
                         </div>
                     </div>
@@ -366,7 +390,7 @@
                                     </div>
                                 </div>
                                 <div class="room-title mt-3">
-                                    <h4>Phòng Suite Tổng Thống</h4>
+                                    <h4>Phòng Tổng Thống</h4>
                                 </div>
                                 <p class="description">
                                     Phòng được thiết kế hiện đại với đầy đủ tiện nghi, mang đến cho bạn trải nghiệm nghỉ
@@ -387,10 +411,10 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
             <!-- Phòng 1 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="../img/phong2.png" class="img-fluid" style="height: 400px;" alt="Phòng 1">
                     <div class="room-info info-default text-center">
@@ -447,7 +471,7 @@
             </div>
 
             <!-- Phòng 2 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="https://res.cloudinary.com/hoahien/image/upload/v1748451993/snswyyott2wtm8cgnzfm.jpg"
                         class="img-fluid" style="height: 400px;" alt="Phòng 2">
@@ -505,7 +529,7 @@
             </div>
 
             <!-- Phòng 3 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="https://res.cloudinary.com/hoahien/image/upload/v1746632008/m6c19cusvnako4j5nnq0.jpg"
                         class="img-fluid" style="height: 400px;" alt="Phòng 3">
@@ -565,7 +589,7 @@
     <div class="container mt-5">
         <div class="row">
             <!-- Phòng 1 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="https://res.cloudinary.com/hoahien/image/upload/v1744513733/zjlmgnhkfxabdgmjjbau.jpg"
                         class="img-fluid" style="height: 400px;" alt="Phòng 1">
@@ -623,7 +647,7 @@
             </div>
 
             <!-- Phòng 2 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="https://res.cloudinary.com/hoahien/image/upload/v1744513733/uuse8rcrqtfknwskrlil.jpg"
                         class="img-fluid" style="height: 400px;" alt="Phòng 2">
@@ -640,7 +664,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <h4 class="suite-title mt-2">Phòng Penthouse Sân Thượng</h4>
+                                <h4 class="suite-title mt-2">Penthouse Sân Thượng</h4>
                             </div>
                         </div>
                     </div>
@@ -659,7 +683,7 @@
                                     </div>
                                 </div>
                                 <div class="room-title mt-3">
-                                    <h4>Phòng Penthouse Sân Thượng</h4>
+                                    <h4>Penthouse Sân Thượng</h4>
                                 </div>
                                 <p class="description">
                                     Phòng được thiết kế hiện đại với đầy đủ tiện nghi, mang đến cho bạn trải nghiệm nghỉ
@@ -681,7 +705,7 @@
             </div>
 
             <!-- Phòng 3 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="https://res.cloudinary.com/hoahien/image/upload/v1745071140/zfejjmsiaoqsm3vqucsl.jpg"
                         class="img-fluid" style="height: 400px;" alt="Phòng 3">
@@ -741,7 +765,7 @@
     <div class="container mt-5">
         <div class="row">
             <!-- Phòng 1 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="../img/phong2.png" class="img-fluid" style="height: 400px;" alt="Phòng 1">
                     <div class="room-info info-default text-center">
@@ -757,7 +781,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <h4 class="suite-title mt-2">Phòng Royal Sang Trọng</h4>
+                                <h4 class="suite-title mt-2">Phòng Royal </h4>
                             </div>
                         </div>
                     </div>
@@ -776,7 +800,7 @@
                                     </div>
                                 </div>
                                 <div class="room-title mt-3">
-                                    <h4>Phòng Royal Sang Trọng</h4>
+                                    <h4>Phòng Royal </h4>
                                 </div>
                                 <p class="description">
                                     Phòng được thiết kế hiện đại với đầy đủ tiện nghi, mang đến cho bạn trải nghiệm nghỉ
@@ -798,7 +822,7 @@
             </div>
 
             <!-- Phòng 2 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="../img/phong3.png" class="img-fluid" style="height: 400px;" alt="Phòng 2">
                     <div class="room-info info-default text-center">
@@ -814,7 +838,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <h4 class="suite-title mt-2">Phòng Suite Sang Trọng</h4>
+                                <h4 class="suite-title mt-2">Phòng Sang Trọng</h4>
                             </div>
                         </div>
                     </div>
@@ -833,7 +857,7 @@
                                     </div>
                                 </div>
                                 <div class="room-title mt-3">
-                                    <h4>Phòng Suite Sang Trọng</h4>
+                                    <h4>Phòng Sang Trọng</h4>
                                 </div>
                                 <p class="description">
                                     Phòng được thiết kế hiện đại với đầy đủ tiện nghi, mang đến cho bạn trải nghiệm nghỉ
@@ -855,7 +879,7 @@
             </div>
 
             <!-- Phòng 3 -->
-            <div class="col-md-4 mb-4">
+            <div class="AllRoom BasicRoom col-md-4 mb-4">
                 <div class="room-banner position-relative">
                     <img src="https://res.cloudinary.com/hoahien/image/upload/v1748451993/snswyyott2wtm8cgnzfm.jpg"
                         class="img-fluid" style="height: 400px;" alt="Phòng 3">
